@@ -1,25 +1,42 @@
-.compBackgroundAnalisi {
+.compBackgroundRisorse {
     background-color: #1B1F23;
     border-radius: 10px;
     color: #EDEDE3;
     margin-top: 0.5rem;
+
 }
 
-.pageGrayTxtAnalisi {
+.pageGrayTxtRisorse {
     color: #949493;
 }
+
+.pageGrayTxtRisorseNo {
+    background-color: #38434F;
+    padding: 1px 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #949493;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: none;
+        color: #949493;
+    }
+}
+
 
 .d-flex.flex-column a:nth-child(1) {
     font-weight: bold;
     color: #EDEDE3;
     text-decoration: none;
+
     &:hover {
         color: #AAD6FF;
         text-decoration: underline;
     }
 }
 
-.analisiFooter {
+.risorseFooter {
     padding: 0.5rem 0;
     border-top: 1px solid #949493;
     font-weight: 600;
@@ -40,12 +57,12 @@ h5 {
     margin: 0
 }
 
-.pageGrayTxtAnalisi.align-items-center.d-flex {
+.pageGrayTxtRisorse.align-items-center.d-flex {
     font-size: 90%;
     margin-bottom: 0.5rem;
 }
 
-.pageGrayTxtAnalisi.align-items-center.d-flex span {
+.pageGrayTxtRisorse.align-items-center.d-flex span {
     margin-left: 2px;
 }
 

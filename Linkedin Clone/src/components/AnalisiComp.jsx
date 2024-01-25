@@ -5,11 +5,11 @@ import { Card } from 'react-bootstrap';
 
 export default function AnalisiComp() {
     return (
-        <Card className='compBackground'>
+        <Card className='compBackgroundAnalisi'>
             <Card.Body className='d-flex flex-column' >
                 <div className=''>
                     <h5>Analisi</h5>
-                    <div className='pageGrayTxt align-items-center d-flex'>
+                    <div className='pageGrayTxtAnalisi align-items-center d-flex'>
                         <EyeFill />
                         <span>Solo per te</span>
                     </div>
@@ -19,7 +19,7 @@ export default function AnalisiComp() {
                         <div className='d-flex justify-content-between'>
                             <div className='icons'><PeopleFill /></div>
                             <div className='d-flex flex-column'>
-                                <span>37 visualizzazioni del profilo</span>
+                                <a href="#">37 visualizzazioni del profilo</a>
                                 <span>Scopri chi ha visitato il tuo profilo</span>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ export default function AnalisiComp() {
                         <div className='d-flex justify-content-between'>
                             <div className='icons'><BarChartFill /></div>
                             <div className='d-flex flex-column'>
-                                <span>238 impressioni del post</span>
+                                <a href="#">238 impressioni del post</a>
                                 <span>Scopri chi sta interagendo con i tuoi post</span>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ export default function AnalisiComp() {
                         <div className='d-flex justify-content-between'>
                             <div className='icons'><Search /></div>
                             <div className='d-flex flex-column'>
-                                <span>1 comparsa nei motori di ricerca</span>
+                                <a href="#">1 comparsa nei motori di ricerca</a>
                                 <span>Vedi quante volte compari nei risultati di ricerca</span>
                             </div>
                         </div>
