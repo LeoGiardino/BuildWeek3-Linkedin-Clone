@@ -1,0 +1,45 @@
+.compBackground {
+    background-color: #1B1F23;
+    border-radius: 10px;
+    color: #EDEDE3;
+}
+
+.pageGrayTxt {
+    color: #949493;
+}
+
+.d-flex.flex-column span:nth-child(1) {
+    font-weight: bold;
+}
+
+.analisiFooter {
+    padding: 0.5rem 0;
+    border-top: 1px solid #949493;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #44474B;
+        transition: 0.2s;
+    }
+}
+
+.icons {
+    margin-top: -2px;
+    margin: -2px 10px 0 0;
+}
+
+h5 {
+    margin: 0
+}
+
+.pageGrayTxt.align-items-center.d-flex {
+    font-size: 90%;
+}
+
+.pageGrayTxt.align-items-center.d-flex span {
+    margin-left: 2px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
