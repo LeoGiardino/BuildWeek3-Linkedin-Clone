@@ -6,6 +6,8 @@ import RightProfile from '../components/RightProfile';
 import CentroProfile from '../components/CentroProfile';
 
 
+
+
 export default function BodyProfile() {
 
     const dispatch = useDispatch();
@@ -23,7 +25,6 @@ export default function BodyProfile() {
 
                 <CentroProfile />
                 <RightProfile />
-
             </div>
 
         </>

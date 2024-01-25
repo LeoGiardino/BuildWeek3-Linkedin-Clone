@@ -1,0 +1,34 @@
+.bg-body-bglink {
+    background-color: #16191C !important;
+    color: #A49D84 !important;
+    border-bottom: 1px solid #373A3D;
+    height: 45px;
+}
+
+.bi-linkedin {
+    color: #D3D1D0 !important;
+    font-size: 35px;
+}
+
+body {
+    background-color: #16191C !important;
+}
+
+.custom-placeholder::placeholder {
+    color: #949493;
+}
+
+.bottoneNav:hover {
+    color: #eeecea;
+}
+
+.custom-placeholder:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 0.1rem #ffffff !important;
+  }
+
+  .dropNo:focus {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
