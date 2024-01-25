@@ -3,6 +3,7 @@ import '../styles/PrimoBox.css';
 import '../styles/ColorPallette.css';
 import { useSelector } from 'react-redux';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import pen from '../assets/free_icon.svg'
 
 export default function PrimoBox() {
     const state = useSelector(state => state);
@@ -23,8 +24,13 @@ export default function PrimoBox() {
                     style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                 />
                 <div className='immagineP'></div>
+                <div className='penCont'>
+                <img className='pen' src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Pen-4-icon.png" alt=""/>
+                </div>
+                
             </div>
-            <div className='d-flex p-3 pb-0'>
+            <div className='d-flex p-3 pb-0 infoCont'>
+                <img className='infoPen' src={pen} alt="" />
                 {state.profili && state.profili.profili && (
                     <>
                         <div className='informazioni pt-5'>
