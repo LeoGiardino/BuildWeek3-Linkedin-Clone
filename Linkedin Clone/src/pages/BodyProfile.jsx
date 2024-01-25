@@ -4,18 +4,24 @@ import { getProfile } from '../redux/actions/profiles'
 
 export default function BodyProfile() {
 
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-   useEffect(() => {
-       dispatch(getProfile())
-   },[])
+  useEffect(() => {
+    dispatch(getProfile())
+  }, [])
 
-   const state = useSelector(state => state.profili)
-   console.log(state);
+  const state = useSelector(state => state.profili)
+  console.log(state);
 
   return (
-    <>
+    <Container>
+      <Row>
+        <Col md={7} xs={12}>
+        </Col>
 
-    </>
+        <Col md={4} xs={0}>
+        </Col>
+      </Row>
+    </Container>
   )
 }
