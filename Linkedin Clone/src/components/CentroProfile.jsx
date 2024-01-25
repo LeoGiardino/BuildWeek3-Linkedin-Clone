@@ -3,6 +3,6 @@ import '../styles/CentroProfile.css'
 
 export default function CentroProfile() {
   return (
-    <div className='centro me-5'>c</div>
+    <div className='centro me-5'></div>
   )
 }
