@@ -16,8 +16,7 @@ export default function BodyProfile() {
         dispatch(getProfile())
     }, [])
 
-    const state = useSelector(state => state.profili)
-    console.log(state);
+
 
     return (
         <>

@@ -7,7 +7,7 @@ import Modale from './Modale'
 
 export default function RightProfile() {
   return (
-    <div className='destra'>
+    <div className='destra d-none d-lg-block'>
         <LanguageComponent />
         <LearningComponent/>
         <PersoneSide/>

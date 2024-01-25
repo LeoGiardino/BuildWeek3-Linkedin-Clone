@@ -1,5 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { thunk } from 'redux-thunk'; // Modifica qui
+import {thunk} from 'redux-thunk';
+
+
 
 import allProfile from '../reducers/allProfile';
 import esperienzeReducer from '../reducers/esperienzeReducer';
