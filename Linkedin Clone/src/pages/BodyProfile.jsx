@@ -19,7 +19,7 @@ export default function BodyProfile() {
 
     return (
         <>
-            <div className='d-flex h-100 w-100 container p-4'>
+            <div className='d-flex w-100 container p-4'>
 
                 <CentroProfile />
                 <RightProfile />
