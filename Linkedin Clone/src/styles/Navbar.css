@@ -10,10 +10,6 @@
     font-size: 35px;
 }
 
-body {
-    background-color: #16191C !important;
-}
-
 .custom-placeholder::placeholder {
     color: #949493;
 }
