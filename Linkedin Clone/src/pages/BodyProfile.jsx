@@ -1,27 +1,29 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProfile } from '../redux/actions/profiles'
+import '../styles/BodyProfile.css'
+import RightProfile from '../components/RightProfile';
+import CentroProfile from '../components/CentroProfile';
+
 
 export default function BodyProfile() {
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getProfile())
-  }, [])
+    useEffect(() => {
+        dispatch(getProfile())
+    }, [])
 
-  const state = useSelector(state => state.profili)
-  console.log(state);
+    const state = useSelector(state => state.profili)
+    console.log(state);
 
-  return (
-    <Container>
-      <Row>
-        <Col md={7} xs={12}>
-        </Col>
+    return (
+        <>
+            <div className='d-flex h-100 w-100 container p-4'>
+                <CentroProfile />
+                <RightProfile />
+            </div>
 
-        <Col md={4} xs={0}>
-        </Col>
-      </Row>
-    </Container>
-  )
+        </>
+    )
 }
