@@ -13,8 +13,7 @@ export default function CentroProfileRandom() {
       <div className='centro me-3' style={{ width: '100%' }}>
         
         <ProfiloConsultati/>
-          <AnalisiComp />
-        <RisorseComp />
+         
       </div>
     </>
 
