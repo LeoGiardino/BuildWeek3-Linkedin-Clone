@@ -7,28 +7,34 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/Navbar.css";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
+import Button from "react-bootstrap/esm/Button";
+import { useSelector } from "react-redux"; 
 
 function Navigazione() {
+  const state1 = useSelector((state) => state.profili);
   return (
     <Navbar
-      expand="lg"
+      bg="dark"
+      data-bs-theme="dark"
+      expand="xl"
       className="bg-body-bglink"
       style={{
         "--bs-navbar-padding-y": "0",
         "--bs-navbar-brand-padding-y": "0",
         color: "#A49D84",
         height: "62px",
+        zIndex: 15,
       }}
     >
-      <Container>
+      <Container className="px-4">
         <Navbar.Brand href="#home">
           <i className="bi bi-linkedin"></i>
         </Navbar.Brand>
         <Form inline>
           <Form.Control
             type="text"
-            placeholder="⌕ Cerca"
-            className="custom-placeholder"
+            placeholder="⌕ cerca"
+            className="custom-placeholder ricercaResponsive"
             style={{
               backgroundColor: "#2D363F",
               color: "#EDEDE3",
@@ -42,7 +48,7 @@ function Navigazione() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">
-              <Container className="text-center">
+              <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
                     class="bi bi-house-door-fill"
@@ -64,7 +70,7 @@ function Navigazione() {
               </Container>
             </Nav.Link>
             <Nav.Link href="#rete">
-              <Container className="text-center">
+              <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
                     class="bi bi-people-fill"
@@ -86,7 +92,7 @@ function Navigazione() {
               </Container>
             </Nav.Link>
             <Nav.Link href="#lavoro">
-              <Container className="text-center">
+              <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
                     class="bi bi-briefcase-fill"
@@ -108,7 +114,7 @@ function Navigazione() {
               </Container>
             </Nav.Link>
             <Nav.Link href="#messaggistica">
-              <Container className="text-center">
+              <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
                     class="bi bi-chat-dots-fill"
@@ -130,7 +136,7 @@ function Navigazione() {
               </Container>
             </Nav.Link>
             <Nav.Link href="#notifiche">
-              <Container className="text-center">
+              <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
                     class="bi bi-bell-fill"
@@ -154,7 +160,7 @@ function Navigazione() {
             <Dropdown
               style={{ borderRight: "1px solid #373A3D", paddingRight: "15px" }}
             >
-              <div className="bottoneNav d-flex flex-column text-center">
+              <div className="bottoneNav d-flex flex-column LinkAlign">
                 <i
                   class="bi bi-bell-fill"
                   style={{
@@ -166,7 +172,7 @@ function Navigazione() {
                 <Dropdown.Toggle
                   variant="none"
                   id="dropdown-basic"
-                  className="dropNo"
+                  className="dropNo LinkAlign"
                   style={{
                     color: "#949493",
                     fontSize: "13px",
@@ -179,19 +185,79 @@ function Navigazione() {
                   Tu
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu style={{ backgroundColor: "#16191C" }}>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Menu
+                  style={{
+                    backgroundColor: "#16191C",
+                    maxWidth: "300px",
+                    border: "1px solid #373A3D",
+                    borderRadius: "15px",
+                  }}
+                  className="dropdown-menu-end"
+                >
+                  <Dropdown.Item
+                    href="#/action-2"
+                    className="profileNav"
+                    style={{ borderBottom: "1px solid #373A3D" }}
+                  >
+                    <div className="d-flex">
+                      <div className="immaginePNav"></div>
+                      <div className="d-flex flex-column ms-2">
+                        <span style={{ color: "#EDEDE3" }}>{state1?.profili?.name + " " + state1?.profili?.surname}</span>
+                        <span
+                          style={{
+                            fontSize: "14px",
+                            color: "#EDEDE3",
+                            fontWeight: "400",
+                          }}
+                        >
+                          Full Stack Developer
+                        </span>
+                      </div>
+                    </div>
+                    <div className="d-flex flex-column mt-2">
+                      <Button className="btn2 fw-bold">Aggiungi Sezione</Button>
+                    </div>
+                  </Dropdown.Item>
+                  <Dropdown.ItemText style={{ color: "#EDEDE3" }}>
+                    Account
+                  </Dropdown.ItemText>
                   <Dropdown.Item href="#/action-2">
-                    Another action
+                    <i
+                      class="bi bi-slash-square-fill"
+                      style={{ color: "orange" }}
+                    ></i>{" "}
+                    <span className="premiumHover">
+                      Prova Premium per 0 EUR
+                    </span>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
-                    Something else
+                    Impostazione e privacy
                   </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Guida</Dropdown.Item>
+                  <Dropdown.Item
+                    href="#/action-3"
+                    style={{ borderBottom: "1px solid #373A3D" }}
+                  >
+                    Lingua
+                  </Dropdown.Item>
+                  <Dropdown.ItemText style={{ color: "#EDEDE3" }}>
+                    Gestisci
+                  </Dropdown.ItemText>
+                  <Dropdown.Item href="#/action-2">
+                    Post e attività
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    href="#/action-3"
+                    style={{ borderBottom: "1px solid #373A3D" }}
+                  >
+                    Account per la pubblicazione di offerte
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Esci</Dropdown.Item>
                 </Dropdown.Menu>
               </div>
             </Dropdown>
             <Dropdown style={{ paddingRight: "10px" }}>
-              <div className="bottoneNav d-flex flex-column text-center">
+              <div className="bottoneNav d-flex flex-column LinkAlign">
                 <i
                   class="bi bi-grid-3x3-gap-fill"
                   style={{
@@ -203,7 +269,7 @@ function Navigazione() {
                 <Dropdown.Toggle
                   variant="none"
                   id="dropdown-basic"
-                  className="dropNo"
+                  className="dropNo LinkAlign"
                   style={{
                     color: "#949493",
                     fontSize: "13px",
@@ -213,23 +279,39 @@ function Navigazione() {
                   Per le aziende
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu style={{ backgroundColor: "#16191C" }}>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
+                <Dropdown.Menu
+                  style={{
+                    backgroundColor: "#16191C",
+                    maxWidth: "300px",
+                    border: "1px solid #373A3D",
+                    borderRadius: "15px",
+                  }}
+                  className="dropdown-menu-end"
+                >
+                  <Dropdown.ItemText style={{ color: "#EDEDE3" }}>
+                    Per le aziende
+                  </Dropdown.ItemText>
+                  <Dropdown.Item href="#/action-3">
+                    Assumi su LinkedIn
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
-                    Something else
+                    Vendi con LinkedIn
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    Offerta di lavoro gratuita
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">
+                    Fai pubblicità su LinkedIn
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">
+                    Impara con LinkedIn
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">
+                    Centro amministrazione
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </div>
             </Dropdown>
-            <a
-              href="#"
-              style={{ color: "orange", fontSize: "13px", marginTop: "21px" }}
-            >
-              Prova Premium per 0 EUR
-            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>
