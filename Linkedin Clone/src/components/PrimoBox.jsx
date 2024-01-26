@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import pen from '../assets/free_icon.svg'
 
 export default function PrimoBox() {
-    const state = useSelector(state => state);
+    const state = useSelector(state => state.profili);
     console.log(state);
     
     if (!state || !state.profili) {
@@ -31,17 +31,17 @@ export default function PrimoBox() {
             </div>
             <div className='d-flex p-3 pb-0 infoCont'>
                 <img className='infoPen' src={pen} alt="" />
-                {state.profili && state.profili.profili && (
+                {state.profili && state.profili && (
                     <>
                         <div className='informazioni pt-5'>
                             <h4 className='pageWhtTxt mb-1 d-flex align-items-center'>
-                                <span className='pageWhtTxt me-1'>{state.profili.profili.name}</span>
-                                <span className='pageWhtTxt me-2'>{state.profili.profili.surname}</span>
+                                <span className='pageWhtTxt me-1'>{state.profili.name}</span>
+                                <span className='pageWhtTxt me-2'>{state.profili.surname}</span>
                                 <span className='verifica ms-1'>
                                     <i className='bi bi-shield-check'></i> Inizia la verifica
                                 </span>
                             </h4>
-                            <p className='pageWhtTxt mb-2'>{state.profili.profili.title}</p>
+                            <p className='pageWhtTxt mb-2'>{state.profili.title}</p>
                             <p className='pageGrayTxt mb-2 fsize-small'>
                                 Indirizzo{' '}
                                 <span>
