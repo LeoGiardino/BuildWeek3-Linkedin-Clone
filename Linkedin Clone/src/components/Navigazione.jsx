@@ -8,8 +8,10 @@ import "../styles/Navbar.css";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/esm/Button";
+import { useSelector } from "react-redux"; 
 
 function Navigazione() {
+  const state1 = useSelector((state) => state.profili);
   return (
     <Navbar
       bg="dark"
@@ -200,7 +202,7 @@ function Navigazione() {
                     <div className="d-flex">
                       <div className="immaginePNav"></div>
                       <div className="d-flex flex-column ms-2">
-                        <span style={{ color: "#EDEDE3" }}>Leo Giardino</span>
+                        <span style={{ color: "#EDEDE3" }}>{state1?.profili?.name + " " + state1?.profili?.surname}</span>
                         <span
                           style={{
                             fontSize: "14px",
