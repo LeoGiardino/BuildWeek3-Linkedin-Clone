@@ -10,8 +10,8 @@ export default function LanguageComponent() {
             <p className='pageWhtTxt mb-0'>Lingua del profilo</p>
             {/* <img src={pencil} /> */}
             <div className='py-3 d-flex justify-content-between'>
-              <button className='btn1'>Italiano</button>
-              <button className='btn2'>Inglese</button>
+              <button className='btn1 w-50'>Italiano</button>
+              <button className='btn2 w-50'>Inglese</button>
             </div>
         </div>
 
