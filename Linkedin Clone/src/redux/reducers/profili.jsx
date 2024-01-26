@@ -6,6 +6,12 @@ export default function profiliReducer(state = [], action) {
           ...state,
           profili: action.payload
       };
+
+      case 'PUT_PROFILE':
+        return {
+          ...state,
+          profili: action.payload
+        }
       default:
         break;
     }
