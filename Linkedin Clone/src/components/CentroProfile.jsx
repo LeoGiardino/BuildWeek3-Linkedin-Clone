@@ -4,6 +4,7 @@ import PrimoBox from './PrimoBox'
 import AnalisiComp from './AnalisiComp'
 import RisorseComp from './RisorseComp'
 import InformazioniComp from './InformazioniComp'
+import EsperienzaComp from './EsperienzaComp'
 
 export default function CentroProfile() {
   return (
@@ -14,6 +15,7 @@ export default function CentroProfile() {
           <AnalisiComp />
         <RisorseComp />
         <InformazioniComp />
+        <EsperienzaComp />
       </div>
     </>
 

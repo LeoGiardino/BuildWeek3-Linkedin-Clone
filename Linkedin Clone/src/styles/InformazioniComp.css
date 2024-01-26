@@ -3,28 +3,28 @@
     border-radius: 10px;
     color: #EDEDE3;
     margin-top: 0.5rem;
-
 }
 
-.infoPen {
+.infoPen2 {
     cursor: pointer;
     margin-right: 0.5rem;
 }
 
 h5 {
-    margin: 0
+    margin: 0;
+    font-weight: bold;
 }
 
 .card-body {
     padding: 1.5rem;
 }
 
-.firstRow {
+.firstInfoRow {
     border-bottom: 1px solid #949493;
     padding-bottom: 1rem;
 }
 
-.secondRow {
+.secondInfoRow {
     padding: 1rem;
     border: 1px solid #949493;
     border-radius: 10px;
