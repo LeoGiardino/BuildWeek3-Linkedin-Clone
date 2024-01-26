@@ -27,26 +27,24 @@ h5 {
     padding: 1.5rem;
 }
 
-.certif {
+.competenza {
     font-weight: bold;
     color: #EDEDE3;
     font-size: 1.1rem;
 }
-
-.enteCertif {}
 
 .periodoCertif {
     color: #949493;
     font-size: 0.9rem;
 }
 
-.credenziali {
+.seguiti {
     margin: 1rem 0;
     border: 2px solid #949493;
     border-radius: 2rem;
     background-color: #1B1F23;
     color: #EDEDE3;
-    width: 50%;
+    width: 100%;
     text-align: start;
     padding: 0.5rem 0.8rem;
     font-weight: 600;
@@ -57,8 +55,9 @@ h5 {
     }
 }
 
-.imgAzienda {
-    min-width: 48px;
+.imgComp {
+    min-width: 30px;
+    max-width: 30px;
     margin-right: 0.8rem;
     margin-top: 0.3rem;
 }
@@ -72,4 +71,14 @@ h5 {
         background-color: #44474B;
         transition: 0.2s;
     }
+}
+
+.iconCompetenze {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 24px;
+}
+
+.inBody {
+ border-top: 1px solid #949493;
 }

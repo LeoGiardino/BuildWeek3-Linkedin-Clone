@@ -8,6 +8,8 @@ import EsperienzaComp from './EsperienzaComp'
 import FormazioneComp from './FormazioneComp'
 import LicenzeComp from './LicenzeComp'
 import CompetenzeComp from './CompetenzeComp'
+import InteressiComp from './InteressiComp'
+import AttivitaComp from './AttivitaComp'
 
 export default function CentroProfile() {
   return (
@@ -18,10 +20,12 @@ export default function CentroProfile() {
         <AnalisiComp />
         <RisorseComp />
         <InformazioniComp />
+        <AttivitaComp />
         <EsperienzaComp />
         <FormazioneComp />
         <LicenzeComp />
         <CompetenzeComp />
+        <InteressiComp />
       </div>
     </>
 
