@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,7 +15,7 @@ function App() {
       <Navigazione />
       
       <Routes>
-        <Route path='/me' element={<BodyProfile />}/>
+        <Route path='/' element={<BodyProfile />}/>
         <Route path='/:nome' element={<RandomProfile/>}/>
       </Routes>
       

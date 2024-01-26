@@ -14,7 +14,6 @@ export default function CentroProfile() {
     <>
 
       <div className='centro me-3' style={{ width: '100%' }}>
-        
         <PrimoBox />
         <AnalisiComp />
         <RisorseComp />
