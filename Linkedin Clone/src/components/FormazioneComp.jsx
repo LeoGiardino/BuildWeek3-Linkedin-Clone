@@ -17,7 +17,7 @@ export default function FormazioneComp() {
 
                 <div className='d-flex justify-content-between flex-column align-items-start mb-4'>
                     <div className='d-flex justify-content-between align-items-start '>
-                        <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
+                        <div className='imgAzienda'><img src='https://picsum.photos/40'></img></div>
                         <div className='d-flex flex-column'>
                             <span className='ente'>Ente</span>
                             <span className='nomeFormazione'>nomeFormazione</span>
@@ -32,7 +32,7 @@ export default function FormazioneComp() {
 
                 <div className='d-flex justify-content-between flex-column align-items-start mb-4'>
                     <div className='d-flex justify-content-between align-items-start '>
-                        <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
+                        <div className='imgAzienda'><img src='https://picsum.photos/40/40'></img></div>
                         <div className='d-flex flex-column'>
                             <span className='ente'>Ente</span>
                             <span className='nomeFormazione'>nomeFormazione</span>
@@ -47,7 +47,7 @@ export default function FormazioneComp() {
 
                 <div className='d-flex justify-content-between flex-column align-items-start mb-4'>
                     <div className='d-flex justify-content-between align-items-start '>
-                        <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
+                        <div className='imgAzienda'><img src='https://picsum.photos/40'></img></div>
                         <div className='d-flex flex-column'>
                             <span className='ente'>Ente</span>
                             <span className='nomeFormazione'>nomeFormazione</span>
