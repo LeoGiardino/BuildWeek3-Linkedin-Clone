@@ -7,7 +7,7 @@ import listaProfiliReducer from '../reducers/listaProfiliReducer'
 
 const state = {
   profili: {},
-  esperienze: {},
+  esperienze: [],
   listaProfili: []
 };
 
