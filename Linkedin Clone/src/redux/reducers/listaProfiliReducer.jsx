@@ -3,7 +3,7 @@ export default function listaProfiliReducer(state = [], action) {
       case 'GET_ALL_PROFILES':
         return {
             
-          listaProfili: {...action.payload},
+          listaProfili: [...action.payload],
         };
       default:
         break;

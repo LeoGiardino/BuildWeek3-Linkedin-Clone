@@ -12,7 +12,7 @@ export const getListaProfili = () => {
         }
         axios.request(options)
         .then(response => {
-            console.log(response.data);
+            //console.log(response.data);
             dispatch({
                 type: 'GET_ALL_PROFILES',
                 payload: response.data
