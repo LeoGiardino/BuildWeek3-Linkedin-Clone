@@ -46,6 +46,7 @@ h5 {
 
 .imgAzienda {
     min-width: 48px;
+    max-width: 48px;
     margin-right: 0.8rem;
     margin-top: 0.3rem;
 }
