@@ -16,7 +16,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<BodyProfile />}/>
-        <Route path='/:nome' element={<RandomProfile/>}/>
+        <Route path='/:id' element={<RandomProfile/>}/>
       </Routes>
       
     </BrowserRouter>

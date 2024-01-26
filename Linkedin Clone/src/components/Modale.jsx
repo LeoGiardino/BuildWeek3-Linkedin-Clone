@@ -20,7 +20,7 @@ export default function Modale({persone}) {
             </Modal.Title>
             </Modal.Header>
             <Modal.Body className='bg-dark text-white'>
-              {persone && persone.slice( 10,20).filter(e=> e.name && e.title !== "" ).map((profilo,indice)=><PersoneSide key={indice} dati={profilo}/>)}
+              {persone && persone.slice( 10,20).filter(e=> e.name && e.title !== "" ).map((profilo,indice)=><PersoneSide modal={setLgShow} key={indice} dati={profilo}/>)}
               </Modal.Body>
         </Modal>
         </div>

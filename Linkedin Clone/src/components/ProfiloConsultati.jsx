@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/PrimoBox.css';
 import '../styles/ColorPallette.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import pen from '../assets/free_icon.svg'
+import {useParams} from "react-router-dom"
+import getAmico from '../redux/actions/getAmico';
 
 export default function ProfiloConsultati() {
-    const state = useSelector(state => state.profili);
+    const state = useSelector(state => state.amico);
     console.log(state);
     
-    if (!state || !state.profili) {
+    const {id} = useParams()
+    console.log(id)
+
+    const dispatch= useDispatch()
+    useEffect(()=>{
+        dispatch(getAmico(id))
+    },[id])
+
+    if (!state ) {
         return null;
     }
-
 
     return (
         <div className='primoBox compBackground'>
@@ -23,28 +32,26 @@ export default function ProfiloConsultati() {
                     alt=''
                     style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                 />
-                <div className='immagineP'></div>
-                <div className='penCont'>
-                <img className='pen' src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Pen-4-icon.png" alt=""/>
-                </div>
+                <div className='immagineP'><img className='imgAmico rounded-circle' src={state.image} /></div>
+                
                 
             </div>
             <div className='d-flex p-3 pb-0 infoCont'>
-                <img className='infoPen' src={pen} alt="" />
-                {state.profili && state.profili && (
+                
+                {state &&  (
                     <>
                         <div className='informazioni pt-5'>
                             <h4 className='pageWhtTxt mb-1 d-flex align-items-center'>
-                                <span className='pageWhtTxt me-1'>{state.profili.name}</span>
-                                <span className='pageWhtTxt me-2'>{state.profili.surname}</span>
+                                <span className='pageWhtTxt me-1'>{state.name}</span>
+                                <span className='pageWhtTxt me-2'>{state.surname}</span>
                                 <span className='verifica ms-1'>
                                     <i className='bi bi-shield-check'></i> Inizia la verifica
                                 </span>
                             </h4>
-                            <p className='pageWhtTxt mb-2'>{state.profili.title}</p>
+                            <p className='pageWhtTxt mb-2'>{state.title}</p>
                             <p className='pageGrayTxt mb-2 fsize-small'>
-                                Indirizzo{' '}
-                                <span>
+                                {state.area}
+                                <span className='ms-2'>
                                     <a href='' style={{ color: '#6ABAFB', textDecoration: 'none' }}>
                                         Informazioni di contatto
                                     </a>
