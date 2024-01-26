@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-export default function PersoneSide({dati}) {
-  console.log(dati)
+export default function PersoneSide({dati, modal}) {
+  //console.log(dati)
   const navigate = useNavigate()
   return (
     <>
-        <div onClick={()=> navigate("/"+ dati._id)} className='px-3 pt-3 backgroundSide mx-1'>
-            <div className='border-bottom border-secondary d-flex pb-3'>
+        <div className='px-3 pt-3 backgroundSide mx-1'>
+            <div onClick={()=> {navigate("/"+ dati._id);modal(false);window.scrollTo(0,0)}} className='border-bottom border-secondary d-flex pb-3 cursore'>
             <div>
                 <img className='imgProfilo rounded-circle me-2' src={dati.image} />
             </div>

@@ -26,10 +26,13 @@ export default function RightProfile() {
     <div className='destra d-none d-lg-block'>
         <LanguageComponent />
         <div className='rounded-3 my-2 backgroundSide pt-1'>
-        <p className='text-white ms-4 mb-0 mt-3'>Altri profili consultati</p>
-        {profili.listaProfili && profili.listaProfili.slice( 0,10).filter(e=> e.name && e.title !== "" ).map((profilo,indice)=><PersoneSide key={indice} dati={profilo}/>)}
-        {profili.listaProfili && <Modale persone={profili.listaProfili}/>}
+          <p className='text-white ms-4 mb-0 mt-3'>Altri profili consultati</p>
+            <div onClick={()=>window.scrollTo(0,0)}>
+                {profili.listaProfili && profili.listaProfili.slice( 0,10).filter(e=> e.name && e.title !== "" ).map((profilo,indice)=><PersoneSide key={indice} dati={profilo}/>)}
+            </div>
+          {profili.listaProfili && <Modale persone={profili.listaProfili}/>}
         </div>
+        
         <LearningComponent/>
     </div>
   )

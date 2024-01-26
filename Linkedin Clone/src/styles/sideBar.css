@@ -12,9 +12,7 @@ p img{
     height: 18px;
 }
 
-p:hover{
-    cursor: pointer;
-}
+
 
 .backgroundSide{
     background-color:#1B1F23 ;
@@ -23,4 +21,8 @@ p:hover{
 .imgProfilo{
     width: 50px;
     height: 50px;
+}
+
+.cursore{
+    cursor: pointer;
 }

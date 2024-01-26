@@ -12,7 +12,7 @@ export default function LearningComponent() {
     <div className='backgroundSide rounded-3 my-2'>
         <p className='text-white mx-3 my-0 py-2'><img className='logo' src={logo} alt="" /> <b>LEARNING</b></p>
         <p className='text-white mx-3 my-0'>Aggiungi nuove competenze con questi corsi, gratuiti per 24 ore</p>
-        <div className='d-flex text-white border-bottom border-secondary mx-3 pt-3'>
+        <div className='d-flex text-white border-bottom border-secondary mx-3 pt-3 cursore'>
             <p >
                 <img className='w-100 h-100' src={comunicazione} alt="comunicazione" />
            </p>
@@ -21,7 +21,7 @@ export default function LearningComponent() {
                 <span className='text-secondary'><b className='visualizzazioni'>2.368 visualizzazioni </b></span>
            </p>
         </div>
-        <div className='d-flex text-white border-bottom border-secondary mx-3 pt-3'>
+        <div className='d-flex text-white border-bottom border-secondary mx-3 pt-3 cursore'>
             <p >
                 <img src={abbraccio} alt="comunicazione" />
            </p>
@@ -30,7 +30,7 @@ export default function LearningComponent() {
                 <span className='text-secondary'><b className='visualizzazioni'>1.784 visualizzazioni </b></span>
            </p>
         </div>
-        <div className='d-flex text-white mx-3 pt-3'>
+        <div className='d-flex text-white mx-3 pt-3 cursore'>
             <p >
                 <img src={suggerimenti} alt="comunicazione" />
            </p>
