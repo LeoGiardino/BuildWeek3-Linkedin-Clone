@@ -69,3 +69,12 @@ h5 {
 .card-body {
     padding: 1.5rem;
 }
+
+.firstRow {
+    border-bottom: 1px solid #949493;
+    padding-bottom: 1rem;
+}
+
+.secondRow {
+    padding-top: 1rem;
+}

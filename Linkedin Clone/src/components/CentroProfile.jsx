@@ -1,9 +1,9 @@
-import React from 'react'
 import '../styles/CentroProfile.css'
 import '../styles/ColorPallette.css'
 import PrimoBox from './PrimoBox'
 import AnalisiComp from './AnalisiComp'
 import RisorseComp from './RisorseComp'
+import InformazioniComp from './InformazioniComp'
 
 export default function CentroProfile() {
   return (
@@ -13,6 +13,7 @@ export default function CentroProfile() {
         <PrimoBox />
           <AnalisiComp />
         <RisorseComp />
+        <InformazioniComp />
       </div>
     </>
 
