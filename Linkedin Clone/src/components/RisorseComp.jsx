@@ -16,7 +16,7 @@ export default function RisorseComp() {
                 <div>
                     <div className='d-flex justify-content-between flex-column align-items-start'>
 
-                        <div className='d-flex justify-content-between mb-4'>
+                        <div className='d-flex justify-content-between firstRow'>
                             <div className='icons'><Router /></div>
                             <div className='d-flex flex-column'>
                                 <div>
@@ -25,7 +25,7 @@ export default function RisorseComp() {
                             </div>
                         </div>
 
-                        <div className='d-flex justify-content-between'>
+                        <div className='d-flex justify-content-between secondRow'>
                             <div className='icons'><PeopleFill /></div>
                             <div className='d-flex flex-column'>
                                 <a href="#">La mia rete</a>
@@ -35,7 +35,7 @@ export default function RisorseComp() {
                     </div>
                 </div>
             </Card.Body>
-            <Card.Footer className='text-center risorseFooter'>Mostra tutte le analisi <ArrowRight /></Card.Footer>
+            <Card.Footer className='text-center risorseFooter'>Mostra tutte le risorse (5) <ArrowRight /></Card.Footer>
         </Card>
     )
 }

@@ -1,9 +1,13 @@
-import React from 'react'
 import '../styles/CentroProfile.css'
 import '../styles/ColorPallette.css'
 import PrimoBox from './PrimoBox'
 import AnalisiComp from './AnalisiComp'
 import RisorseComp from './RisorseComp'
+import InformazioniComp from './InformazioniComp'
+import EsperienzaComp from './EsperienzaComp'
+import FormazioneComp from './FormazioneComp'
+import LicenzeComp from './LicenzeComp'
+import CompetenzeComp from './CompetenzeComp'
 
 export default function CentroProfile() {
   return (
@@ -11,8 +15,13 @@ export default function CentroProfile() {
 
       <div className='centro me-3' style={{ width: '100%' }}>
         <PrimoBox />
-          <AnalisiComp />
+        <AnalisiComp />
         <RisorseComp />
+        <InformazioniComp />
+        <EsperienzaComp />
+        <FormazioneComp />
+        <LicenzeComp />
+        <CompetenzeComp />
       </div>
     </>
 
