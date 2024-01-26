@@ -4,3 +4,8 @@
    
 }
 
+@media screen and (max-width: 991px) {
+    .centro{
+        margin-right: 0!important;
+    }
+}

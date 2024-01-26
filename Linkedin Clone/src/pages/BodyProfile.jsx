@@ -16,12 +16,11 @@ export default function BodyProfile() {
         dispatch(getProfile())
     }, [])
 
-    const state = useSelector(state => state.profili)
-    console.log(state);
+
 
     return (
         <>
-            <div className='d-flex w-100 container p-4'>
+            <div className='d-flex w-100 container p-4 principale'>
 
                 <CentroProfile />
                 <RightProfile />

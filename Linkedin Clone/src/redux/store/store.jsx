@@ -1,23 +1,23 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { thunk } from 'redux-thunk'; // Modifica qui
+import {thunk} from 'redux-thunk';
 
-import allProfile from '../reducers/allProfile';
-import esperienzeReducer from '../reducers/esperienzeReducer';
+import profiliReducer from '../reducers/profili';
+import esperienzeReducer from '../reducers/esperienze';
 
-const initialState = {
+const state = {
   profili: {},
   esperienze: {},
 };
 
 const bigReducer = combineReducers({
-  profili: allProfile,
+  profili: profiliReducer,
   esperienze : esperienzeReducer
 });
 
-console.log(initialState);
+console.log(state);
 
 export const store = createStore(
   bigReducer,
-  initialState,
+  state,
   applyMiddleware(thunk) // Modifica qui
 );
