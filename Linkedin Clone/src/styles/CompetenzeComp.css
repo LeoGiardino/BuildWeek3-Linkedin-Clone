@@ -1,4 +1,4 @@
-.compBackgroundExp {
+.compBackgroundLic {
     background-color: #1B1F23;
     border-radius: 10px;
     color: #EDEDE3;
@@ -27,21 +27,34 @@ h5 {
     padding: 1.5rem;
 }
 
-.professione {
+.certif {
     font-weight: bold;
     color: #EDEDE3;
     font-size: 1.1rem;
 }
 
-.azienda {}
+.enteCertif {}
 
-.periodo {
+.periodoCertif {
     color: #949493;
     font-size: 0.9rem;
 }
 
-.descrizione {
-    margin-top: 1rem;
+.credenziali {
+    margin: 1rem 0;
+    border: 2px solid #949493;
+    border-radius: 2rem;
+    background-color: #1B1F23;
+    color: #EDEDE3;
+    width: 50%;
+    text-align: start;
+    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #44474B;
+        transition: 0.2s;
+    }
 }
 
 .imgAzienda {
@@ -50,12 +63,13 @@ h5 {
     margin-top: 0.3rem;
 }
 
-.expRow {
-    border-bottom: 1px solid #949493;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
+.licenzeFooter {
+    padding: 0.5rem 0;
+    border-top: 1px solid #949493;
+    font-weight: 600;
 
-.expRow:last-of-type {
-    border-bottom: none;
+    &:hover {
+        background-color: #44474B;
+        transition: 0.2s;
+    }
 }

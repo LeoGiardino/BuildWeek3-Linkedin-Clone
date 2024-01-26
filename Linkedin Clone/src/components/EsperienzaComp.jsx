@@ -23,13 +23,10 @@ export default function EsperienzaComp() {
                             <span className='professione'>Professione</span>
                             <span className='azienda'>azienda</span>
                             <span className='periodo'>inizio - fine</span>
-                            <div className='descrizione'>
-                                <span>descrizione lavoro</span>
-                            </div>
+                            <span className='descrizione'>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</span>
                         </div>
                     </div>
                 </div>
-
                 <div className='d-flex justify-content-between flex-column align-items-start expRow'>
                     <div className='d-flex justify-content-between align-items-start '>
                         <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
@@ -40,8 +37,27 @@ export default function EsperienzaComp() {
                             <span className='descrizione'>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</span>
                         </div>
                     </div>
+                </div>     <div className='d-flex justify-content-between flex-column align-items-start expRow'>
+                    <div className='d-flex justify-content-between align-items-start '>
+                        <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
+                        <div className='d-flex flex-column'>
+                            <span className='professione'>Professione</span>
+                            <span className='azienda'>azienda</span>
+                            <span className='periodo'>inizio - fine</span>
+                            <span className='descrizione'>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</span>
+                        </div>
+                    </div>
+                </div>     <div className='d-flex justify-content-between flex-column align-items-start expRow'>
+                    <div className='d-flex justify-content-between align-items-start '>
+                        <div className='imgAzienda'><img src='/src/assets/company.svg'></img></div>
+                        <div className='d-flex flex-column'>
+                            <span className='professione'>Professione</span>
+                            <span className='azienda'>azienda</span>
+                            <span className='periodo'>inizio - fine</span>
+                            <span className='descrizione'>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</span>
+                        </div>
+                    </div>
                 </div>
-
 
             </Card.Body>
         </Card>

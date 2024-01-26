@@ -1,4 +1,4 @@
-.compBackgroundExp {
+.compBackgroundForm {
     background-color: #1B1F23;
     border-radius: 10px;
     color: #EDEDE3;
@@ -27,21 +27,23 @@ h5 {
     padding: 1.5rem;
 }
 
-.professione {
+.ente {
     font-weight: bold;
     color: #EDEDE3;
     font-size: 1.1rem;
 }
 
-.azienda {}
+.nomeFormazione {
+    
+}
 
-.periodo {
+.periodoFormazione {
     color: #949493;
     font-size: 0.9rem;
 }
 
-.descrizione {
-    margin-top: 1rem;
+.modalita {
+    margin: 1rem 0;
 }
 
 .imgAzienda {
@@ -54,8 +56,4 @@ h5 {
     border-bottom: 1px solid #949493;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-}
-
-.expRow:last-of-type {
-    border-bottom: none;
 }
