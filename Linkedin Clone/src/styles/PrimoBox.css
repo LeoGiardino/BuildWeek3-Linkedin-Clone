@@ -147,3 +147,17 @@
     }
 }
 
+.input {
+    background-color: #1B1F23!important;
+    color: #EDEDE3!important;
+}
+
+
+.modal-content {
+    background-color: #1B1F23;
+    color: #EDEDE3;
+}
+
+.modal-title > button {
+    color: #EDEDE3;
+}
