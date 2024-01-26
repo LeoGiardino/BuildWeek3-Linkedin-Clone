@@ -60,3 +60,37 @@
     color: #6ABAFB;
     border: 1px solid #6ABAFB;
 }
+
+@media screen and (max-width: 1199px) {
+.LinkAlign {
+    text-align: right;
+}   
+
+.navbar-collapse  {
+    margin-top: 15px;
+    background-color: #1B1F23;
+    border-radius: 10px;
+    border: 1px;
+    border-color: #373A3D;
+    border-style: solid;
+    margin-left: 66%;
+  }
+
+  .ricercaResponsive {
+    margin-left: 0 !important;
+    margin-right: 0 !important;,
+  }
+}
+
+@media screen and (min-width: 1200px) {
+.LinkAlign {
+    text-align: center;
+}   
+}
+
+@media screen and (max-width: 480px) {
+.ricercaResponsive {
+    width: 90% !important;
+}
+    
+}
