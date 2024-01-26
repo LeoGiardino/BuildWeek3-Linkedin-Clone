@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap'
-import { ArrowRight, BoxArrowUpRight, Dot, InfoSquareFill, PeopleFill } from 'react-bootstrap-icons'
+import { ArrowRight, InfoSquareFill, PeopleFill } from 'react-bootstrap-icons'
 import '../styles/CompetenzeComp.css'
 
 
