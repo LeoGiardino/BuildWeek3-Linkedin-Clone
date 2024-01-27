@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/CentroProfile.css'
-import '../styles/ColorPallette.css'
+import '../../styles/CentroProfile.css'
+import '../../styles/ColorPallette.css'
 import PrimoBox from './PrimoBox'
 import AnalisiComp from './AnalisiComp'
 import RisorseComp from './RisorseComp'

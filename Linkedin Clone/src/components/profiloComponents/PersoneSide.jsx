@@ -1,7 +1,7 @@
 import React from 'react'
-import abbraccio from "../assets/abbraccio.jpg"
+import abbraccio from "../../assets/abbraccio.jpg"
 import { Button } from "react-bootstrap"
-import "../styles/sideBar.css"
+import "../../styles/sideBar.css"
 import { useNavigate } from 'react-router-dom'
 
 

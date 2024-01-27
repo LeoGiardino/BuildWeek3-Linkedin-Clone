@@ -1,7 +1,7 @@
 import React from 'react' 
-import pencil from '../assets/pencil.svg'
-import '../styles/LanguageComponent.css'
-import '../styles/ColorPallette.css'
+import pencil from '../../assets/pencil.svg'
+import '../../styles/LanguageComponent.css'
+import '../../styles/ColorPallette.css'
 
 export default function LanguageComponent() {
   return (

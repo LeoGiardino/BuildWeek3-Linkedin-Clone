@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap'
 import { ArrowRight, Dot, PlusLg } from 'react-bootstrap-icons'
-import '../styles/FormazioneComp.css'
+import '../../styles/FormazioneComp.css'
 
 
 export default function FormazioneComp() {

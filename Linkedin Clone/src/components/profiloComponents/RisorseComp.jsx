@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap'
-import '../styles/RisorseComp.css'
+import '../../styles/RisorseComp.css'
 import { ArrowRight, EyeFill, PeopleFill, Router } from 'react-bootstrap-icons'
 
 export default function RisorseComp() {

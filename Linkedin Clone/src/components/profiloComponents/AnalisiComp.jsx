@@ -1,5 +1,5 @@
 import { ArrowRight, BarChartFill, EyeFill, PeopleFill, Search } from 'react-bootstrap-icons';
-import '../styles/AnalisiComp.css';
+import '../../styles/AnalisiComp.css';
 import { Card } from 'react-bootstrap';
 
 

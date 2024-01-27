@@ -1,7 +1,7 @@
 import React from 'react'
-import ProfiloConsultati from '../components/ProfiloConsultati'
-import RightProfile from '../components/RightProfile'
-import CentroProfileRandom from '../components/CentroProfileRandom'
+import ProfiloConsultati from '../components/profiloComponents/ProfiloConsultati'
+import RightProfile from '../components/profiloComponents/RightProfile'
+import CentroProfileRandom from '../components/profiloComponents/CentroProfileRandom'
 
 
 export default function RandomProfile() {

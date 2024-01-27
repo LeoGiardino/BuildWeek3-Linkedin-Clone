@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap'
 import { ArrowRight, InfoSquareFill, PeopleFill } from 'react-bootstrap-icons'
-import '../styles/CompetenzeComp.css'
+import '../../styles/CompetenzeComp.css'
 
 
 export default function CompetenzeComp() {
