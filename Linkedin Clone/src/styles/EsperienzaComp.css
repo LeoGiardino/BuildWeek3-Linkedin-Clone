@@ -60,3 +60,9 @@ h5 {
 .expRow:last-of-type {
     border-bottom: none;
 }
+
+.pennaEsperienza {
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+}
