@@ -5,8 +5,6 @@ import '../styles/BodyProfile.css'
 import RightProfile from '../components/profiloComponents/RightProfile';
 import CentroProfile from '../components/profiloComponents/CentroProfile';
 
-
-
 export default function BodyProfile() {
 
     const dispatch = useDispatch();

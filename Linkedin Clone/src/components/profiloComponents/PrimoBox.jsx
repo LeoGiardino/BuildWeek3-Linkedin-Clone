@@ -39,6 +39,7 @@ export default function PrimoBox() {
         });
     }, [state.profili]);
 
+
     useEffect(() => {
         setForm(prevForm => ({
           ...prevForm,
@@ -87,6 +88,7 @@ export default function PrimoBox() {
                         style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                     />
                     <div className='immagineP'>
+
                     <img
                         style={{ width: '100%', borderRadius: '50%' }}
                         src={state.profili?.image}
