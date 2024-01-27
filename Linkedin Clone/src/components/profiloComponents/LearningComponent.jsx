@@ -1,9 +1,9 @@
 import React from 'react'
-import comunicazione from "../assets/comunicazione.jpg"
-import abbraccio from "../assets/abbraccio.jpg"
-import suggerimenti from "../assets/suggerimenti.jpg"
-import logo from "../assets/linkedin-logo.png"
-import "../styles/sideBar.css"
+import comunicazione from "../../assets/comunicazione.jpg"
+import abbraccio from "../../assets/abbraccio.jpg"
+import suggerimenti from "../../assets/suggerimenti.jpg"
+import logo from "../../assets/linkedin-logo.png"
+import "../../styles/sideBar.css"
 
 
 export default function LearningComponent() {

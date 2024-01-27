@@ -1,14 +1,14 @@
 import React from 'react';
-import '../styles/PrimoBox.css';
-import '../styles/ColorPallette.css';
+import '../../styles/PrimoBox.css';
+import '../../styles/ColorPallette.css';
 import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import pen from '../assets/free_icon.svg'
+import pen from '../../assets/free_icon.svg'
 import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { getProfile, putProfile } from '../redux/actions/profiles';
+import { getProfile, putProfile } from '../../redux/actions/profiles';
 
 
 export default function PrimoBox() {

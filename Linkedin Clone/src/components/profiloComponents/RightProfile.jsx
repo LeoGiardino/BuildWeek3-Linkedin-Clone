@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import '../styles/RightProfile.css'
+import '../../styles/RightProfile.css'
 import LearningComponent from './LearningComponent'
 import LanguageComponent from './LanguageComponent'
 import PersoneSide from './PersoneSide'
 import Modale from './Modale'
-import "../styles/sideBar.css"
+import "../../styles/sideBar.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { getListaProfili } from '../redux/actions/getListaProfili'
+import { getListaProfili } from '../../redux/actions/getListaProfili'
 
 
 

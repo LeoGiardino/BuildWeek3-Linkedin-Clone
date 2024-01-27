@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap'
 import { Dot, Gem } from 'react-bootstrap-icons'
-import '../styles/InformazioniComp.css'
+import '../../styles/InformazioniComp.css'
 
 
 export default function InformazioniComp() {

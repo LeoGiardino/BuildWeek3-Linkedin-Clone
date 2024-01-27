@@ -1,4 +1,4 @@
-import '../styles/InteressiComp.css'
+import '../../styles/InteressiComp.css'
 import { ArrowRight, Check2 } from 'react-bootstrap-icons'
 import { Card } from 'react-bootstrap'
 

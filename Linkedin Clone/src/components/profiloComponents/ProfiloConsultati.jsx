@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import '../styles/PrimoBox.css';
-import '../styles/ColorPallette.css';
+import '../../styles/PrimoBox.css';
+import '../../styles/ColorPallette.css';
 import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import pen from '../assets/free_icon.svg'
+import pen from '../../assets/free_icon.svg'
 import {useParams} from "react-router-dom"
-import getAmico from '../redux/actions/getAmico';
+import getAmico from '../../redux/actions/getAmico';
 
 export default function ProfiloConsultati() {
     const state = useSelector(state => state.amico);

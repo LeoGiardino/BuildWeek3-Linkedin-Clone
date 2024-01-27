@@ -1,7 +1,6 @@
 .centro {
-
     flex: 1;
-   
+   background-color: aqua;
 }
 
 @media screen and (max-width: 991px) {

@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap'
-import '../styles/AttivitaComp.css'
+import '../../styles/AttivitaComp.css'
 import { ArrowRight, Dot } from 'react-bootstrap-icons'
 
 

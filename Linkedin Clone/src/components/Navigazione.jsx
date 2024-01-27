@@ -9,6 +9,7 @@ import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/esm/Button";
 import { useSelector } from "react-redux"; 
+import { Link } from "react-router-dom";
 
 function Navigazione() {
   const state1 = useSelector((state) => state.profili);
@@ -27,9 +28,9 @@ function Navigazione() {
       }}
     >
       <Container className="px-4">
-        <Navbar.Brand href="#home">
+        <Link >
           <i className="bi bi-linkedin"></i>
-        </Navbar.Brand>
+        </Link>
         <Form inline>
           <Form.Control
             type="text"

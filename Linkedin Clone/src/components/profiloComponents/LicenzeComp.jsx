@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap'
 import { ArrowRight, BoxArrowUpRight, Dot, PlusLg } from 'react-bootstrap-icons'
-import '../styles/LicenzeComp.css'
+import '../../styles/LicenzeComp.css'
 
 
 export default function LicenzeComp() {

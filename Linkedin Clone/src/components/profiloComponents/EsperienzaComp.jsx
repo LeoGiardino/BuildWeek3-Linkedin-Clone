@@ -1,8 +1,8 @@
 import { Card } from 'react-bootstrap'
 import { PlusLg } from 'react-bootstrap-icons'
-import '../styles/EsperienzaComp.css'
+import '../../styles/EsperienzaComp.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { getEsperienze, postEsperienze, putEsperienze } from '../redux/actions/esperienze'
+import { getEsperienze, postEsperienze, putEsperienze } from '../../redux/actions/esperienze'
 import { useEffect } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react'
