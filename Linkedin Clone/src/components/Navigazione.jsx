@@ -28,7 +28,7 @@ function Navigazione() {
       }}
     >
       <Container className="px-4">
-        <Link >
+        <Link  to={"/"}>
           <i className="bi bi-linkedin"></i>
         </Link>
         <Form inline>
@@ -48,7 +48,7 @@ function Navigazione() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">
+            <Nav.Link as={Link} to="/">
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
@@ -92,7 +92,7 @@ function Navigazione() {
                 </div>
               </Container>
             </Nav.Link>
-            <Nav.Link href="#lavoro">
+            <Nav.Link as={Link} to="/jobs">
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
@@ -196,7 +196,6 @@ function Navigazione() {
                   className="dropdown-menu-end"
                 >
                   <Dropdown.Item
-                    href="#/action-2"
                     className="profileNav"
                     style={{ borderBottom: "1px solid #373A3D" }}
                   >
@@ -216,7 +215,7 @@ function Navigazione() {
                       </div>
                     </div>
                     <div className="d-flex flex-column mt-2">
-                      <Button className="btn2 fw-bold">Aggiungi Sezione</Button>
+                      <Button className="btn2 fw-bold" as={Link} to='/me'>Visualizza profilo</Button>
                     </div>
                   </Dropdown.Item>
                   <Dropdown.ItemText style={{ color: "#EDEDE3" }}>
