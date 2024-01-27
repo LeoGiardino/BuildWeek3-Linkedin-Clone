@@ -8,7 +8,8 @@ import { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { getProfile, putProfile } from '../../redux/actions/profiles';
+import { getProfile, putProfile, uploadProfileImage } from '../../redux/actions/profiles';
+
 
 
 export default function PrimoBox() {
@@ -38,6 +39,14 @@ export default function PrimoBox() {
         });
     }, [state.profili]);
 
+
+    useEffect(() => {
+        setForm(prevForm => ({
+          ...prevForm,
+          image: state.profili?.image,
+        }));
+      }, [state.profili?.image]);
+
     const handleInputChange = (e) => {
         console.log("Input changed:", e.target.name, e.target.value);
         console.log("Form:", form);
@@ -52,6 +61,15 @@ export default function PrimoBox() {
         dispatch(putProfile(form));
         setLgShow(false);
         console.log("Form inviato:", form);
+    };
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        console.log("File selected:", file);
+        if (file) {
+            // Carica il file utilizzando l'azione uploadProfileImage
+            dispatch(uploadProfileImage(file));
+        }
     };
     
 
@@ -70,8 +88,21 @@ export default function PrimoBox() {
                         style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                     />
                     <div className='immagineP'>
-                        <img style={{ width: '100%', borderRadius: '50%' }} src={state.profili?.image} alt="" />
-                    </div>
+
+                    <img
+                        style={{ width: '100%', borderRadius: '50%' }}
+                        src={state.profili?.image}
+                        alt=''
+                        onClick={() => document.getElementById('imageInput').click()}
+                    />
+                    <input
+                        type='file'
+                        id='imageInput'
+                        style={{ display: 'none' }}
+                        onChange={handleImageChange}
+                        accept='image/*'
+                    />
+                </div>
                     <div className='penCont'>
                         <img className='pen' src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Pen-4-icon.png" alt="" />
                     </div>

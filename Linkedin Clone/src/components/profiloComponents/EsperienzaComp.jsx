@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap'
 import { PlusLg } from 'react-bootstrap-icons'
 import '../../styles/EsperienzaComp.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { getEsperienze, postEsperienze, putEsperienze } from '../../redux/actions/esperienze'
+import { getEsperienze, postEsperienze, putEsperienze, delEsperienze } from '../../redux/actions/esperienze'
 import { useEffect } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react'
@@ -47,8 +47,9 @@ export default function EsperienzaComp() {
     useEffect(() => {
         dispatch(getEsperienze())
     }, [lgShow2])
+
+    
     const putHandle = (esperienze) => {
-        setLgShow2(true);
         setForm2({
             company: esperienze.company,
             role: esperienze.role,
@@ -57,6 +58,7 @@ export default function EsperienzaComp() {
             startDate: esperienze.startDate,
             _id: esperienze._id
         })
+        setLgShow2(true);
         console.log(form2);
     }
 
@@ -85,7 +87,6 @@ export default function EsperienzaComp() {
                         <h5>Esperienza</h5>
                         <div className='d-flex justify-content-between'>
                             <PlusLg className='addPlusExp' onClick={() => setLgShow(true)} />
-                            <img className="infoPenExp" src="/src/assets/free_icon.svg" alt="" />
                         </div>
                     </div>
 
@@ -94,7 +95,9 @@ export default function EsperienzaComp() {
                     {esperienze && esperienze.length > 0 &&
                         esperienze.map((esperienza) => (
                             <div className='d-flex justify-content-between flex-column align-items-start expRow' key={esperienza._id}>
-                                <div className='d-flex justify-content-end align-items-start w-100'><img onClick={() => putHandle(esperienza)} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" /></div>
+
+                                <div className='d-flex justify-content-end align-items-start pennaEsperienza'><img onClick={() => putHandle(esperienza)} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" /></div>
+
                                 <div className='d-flex justify-content-between align-items-start '>
                                     <div className='imgAzienda'>
                                         <img style={{ width: '100%' }} name='companyLogo' src={esperienza.image}></img>
@@ -194,6 +197,9 @@ export default function EsperienzaComp() {
                             </Form.Group>
 
                         </Form>
+
+                        <Button onClick={() => { dispatch(delEsperienze(form2)); setLgShow2(false) }}>Elimina</Button>
+
                         <Button className='float-end' onClick={() => { dispatch(putEsperienze(form2)); setLgShow2(false) }}>Salva</Button>
                     </Modal.Body>
                 </Modal>

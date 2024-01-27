@@ -8,6 +8,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import RandomProfile from './pages/RandomProfile';
 import BodyHome from './pages/HomeBody';
 import BodyJobs from './pages/BodyJobs'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path='/me' element={<BodyProfile />}/>
         <Route path='/:id' element={<RandomProfile/>}/>
       </Routes>
-      
+      <Footer />
     </BrowserRouter>
+
     </>
   );
 }
