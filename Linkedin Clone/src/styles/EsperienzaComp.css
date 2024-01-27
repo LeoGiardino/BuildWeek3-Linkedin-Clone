@@ -1,0 +1,68 @@
+.compBackgroundExp {
+    background-color: #1B1F23;
+    border-radius: 10px;
+    color: #EDEDE3;
+    margin-top: 0.5rem;
+}
+
+.infoPenExp {
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.addPlusExp {
+    cursor: pointer;
+    font-size: large;
+    width: 100%;
+    align-self: center;
+    margin-right: 0.5rem;
+}
+
+h5 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.professione {
+    font-weight: bold;
+    color: #EDEDE3;
+    font-size: 1.1rem;
+}
+
+
+
+.periodo {
+    color: #949493;
+    font-size: 0.9rem;
+}
+
+.descrizione {
+    margin-top: 1rem;
+}
+
+.imgAzienda {
+    min-width: 48px;
+    max-width: 48px;
+    margin-right: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.expRow {
+    border-bottom: 1px solid #949493;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.expRow:last-of-type {
+    border-bottom: none;
+}
+
+.pennaEsperienza {
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+}

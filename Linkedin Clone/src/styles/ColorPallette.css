@@ -1,0 +1,43 @@
+.pageBackground {
+    background-color: #000000;
+}
+
+.pageWhtTxt {
+    color: #EDEDE3;
+}
+
+.pageGrayTxt {
+    color: #949493;
+}
+
+.pageBlueTxt {
+    color: #6ABAFB;
+}
+
+.compBackground {
+    background-color: #1B1F23;
+}
+
+.bluBtnBg {
+    background-color: #AAD6FF;
+}
+
+.grayblueBtnBg {
+    background-color: #38434F;
+}
+
+.whtBtnBgHvr {
+    background-color: #44474B;
+}
+
+.greenBtnBg {
+    background-color: #37C898;
+}
+
+.greenBtnBgHvr {
+    background-color: #74E5C0;
+}
+
+.grayDetails {
+    background-color: #373A3D;
+}

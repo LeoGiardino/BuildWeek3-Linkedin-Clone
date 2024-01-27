@@ -1,0 +1,51 @@
+.footer {
+    font-size: 90%;
+}
+.copyRightLinkedin {
+    padding-left: 28px;
+    color: #949493;
+    font-size: 90%;
+}
+
+.footer .nav-link {
+    color: #949493;
+    text-decoration: none;
+}
+
+.footer .nav-link:hover .titoloFooter {
+    color: #6ABAFB;
+    text-decoration: underline;
+}
+
+.nav-link .sottotitoloFooter {
+    color: #949493;
+    font-size: 90%;
+    cursor:text;
+}
+
+.titoloFooter:hover {
+    color: #6ABAFB;
+    text-decoration: underline;
+}
+
+.sottotitoloFooter {
+    color: #949493;
+    font-size: 90%;
+    cursor:text;
+}
+
+.btnFooter {
+    border-radius: 6px;
+    background-color: #1B1F23;
+    border: 1px solid #949493;
+    color: #949493;
+    font-size: 90%;
+    cursor:text;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0.5rem;
+    &:hover {
+        border-color: white;
+    }
+}

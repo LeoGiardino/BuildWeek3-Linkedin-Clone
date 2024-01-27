@@ -1,0 +1,96 @@
+.bg-body-bglink {
+    background-color: #16191C !important;
+    color: #A49D84 !important;
+    border-bottom: 1px solid #373A3D;
+    height: 45px;
+}
+
+.bi-linkedin {
+    color: #D3D1D0 !important;
+    font-size: 35px;
+}
+
+.custom-placeholder::placeholder {
+    color: #949493;
+}
+
+.bottoneNav:hover {
+    color: #eeecea;
+}
+
+.custom-placeholder:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 0.1rem #ffffff !important;
+  }
+
+  .dropNo:focus {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.dropdown-item {
+    color: #949493 !important
+}
+
+.dropdown-item:hover{
+    background: none !important ;
+    text-decoration: underline !important;
+}
+
+.premiumHover:hover{
+    color: #6ABAFB;
+}
+
+.immaginePNav{
+    width: 50px;
+    height: 50px;
+    background-color: #6ABAFB;
+    border-radius: 50%;
+    border: 2px solid #1B1F23;
+    z-index: 5;
+}
+
+.profileNav:hover{
+    text-decoration: none !important;
+}
+
+.btn2 {
+    background-color: #1B1F23;
+    color: #6ABAFB;
+    border: 1px solid #6ABAFB;
+}
+
+@media screen and (max-width: 1199px) {
+.LinkAlign {
+    text-align: right;
+}   
+
+.navbar-collapse  {
+    margin-top: 15px;
+    background-color: #1B1F23;
+    border-radius: 10px;
+    border: 1px;
+    border-color: #373A3D;
+    border-style: solid;
+    margin-left: 66%;
+  }
+
+  .ricercaResponsive {
+    margin-left: 0 !important;
+    margin-right: 0 !important;,
+  }
+}
+
+@media screen and (min-width: 1200px) {
+.LinkAlign {
+    text-align: center;
+}   
+}
+
+@media screen and (max-width: 480px) {
+.ricercaResponsive {
+    width: 90% !important;
+}
+    
+}

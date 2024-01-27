@@ -1,0 +1,28 @@
+.visualizzazioni{
+    font-size: 0.7em;
+}
+
+p img{
+    width: 122.55px;
+    height: 72px;
+}
+
+.logo{
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.backgroundSide{
+    background-color:#1B1F23 ;
+}
+
+.imgProfilo{
+    width: 50px;
+    height: 50px;
+}
+
+.cursore{
+    cursor: pointer;
+}

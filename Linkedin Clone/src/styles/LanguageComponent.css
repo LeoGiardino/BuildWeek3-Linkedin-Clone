@@ -1,0 +1,24 @@
+.carta {
+    background-color: #1b1f23;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-bottom: 1px solid #edede3;
+}
+
+.btn1 {
+    border: none;
+    border-radius: 20px;
+    padding: 1px 30px;
+    background-color: #37C898;
+
+}
+
+.btn2 {
+    background-color: #1b1f23;
+    color: #edede3;
+    border: 1px solid #edede3;
+    border-radius: 20px;
+    padding: 1px 30px;
+}
