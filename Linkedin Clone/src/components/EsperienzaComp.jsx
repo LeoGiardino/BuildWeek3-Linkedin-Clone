@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap'
 import { PlusLg } from 'react-bootstrap-icons'
 import '../styles/EsperienzaComp.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { getEsperienze, postEsperienze, putEsperienze } from '../redux/actions/esperienze'
+import { getEsperienze, postEsperienze, putEsperienze, delEsperienze } from '../redux/actions/esperienze'
 import { useEffect } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react'
@@ -47,8 +47,8 @@ export default function EsperienzaComp() {
     useEffect(() => {
         dispatch(getEsperienze())
     }, [lgShow2])
+    
     const putHandle = (esperienze) => {
-        setLgShow2(true);
         setForm2({
             company: esperienze.company,
             role: esperienze.role,
@@ -57,6 +57,7 @@ export default function EsperienzaComp() {
             startDate: esperienze.startDate,
             _id: esperienze._id
         })
+        setLgShow2(true);
         console.log(form2);
     }
 
@@ -194,6 +195,7 @@ export default function EsperienzaComp() {
                             </Form.Group>
 
                         </Form>
+                        <Button onClick={() => { dispatch(delEsperienze(form2)); setLgShow2(false) }}>Elimina</Button>
                         <Button className='float-end' onClick={() => { dispatch(putEsperienze(form2)); setLgShow2(false) }}>Salva</Button>
                     </Modal.Body>
                 </Modal>

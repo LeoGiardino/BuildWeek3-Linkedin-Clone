@@ -67,11 +67,36 @@ export const putEsperienze = (addExp) => {
             .then(response => {
                 dispatch({
                     type: 'PUT_ESPERIENZE',
-                    payload: response.data
+                    payload: addExp
                 });
             })
             .catch(error => {
                 console.error("Error during POST request:", error);
+                console.error("Response data:", error.response ? error.response.data : 'No response data available');
+                // Puoi anche dispatch un'azione di errore qui se necessario
+            });
+    };
+};
+export const delEsperienze = (delExp) => {
+    return function (dispatch, getState) {
+        const options = {
+            method: 'DELETE',
+            url: `https://striveschool-api.herokuapp.com/api/profile/${mio}/experiences/${delExp._id}`,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            data: delExp
+        };
+        console.log('Request body:', delExp);
+        axios.request(options)
+            .then(response => {
+                dispatch({
+                    type: 'DEL_ESPERIENZE',
+                    payload: delExp  // Usa delExp invece di response.data
+                });
+            })
+            .catch(error => {
+                console.error("Error during DELETE request:", error);
                 console.error("Response data:", error.response ? error.response.data : 'No response data available');
                 // Puoi anche dispatch un'azione di errore qui se necessario
             });

@@ -12,6 +12,15 @@ export default function profiliReducer(state = [], action) {
           ...state,
           profili: action.payload
         }
+
+        case 'UPLOAD_PROFILE_IMAGE':
+          console.log("Immagine caricata:", action);
+          console.log("Stato del reducer:", state);
+          return {
+            ...state,
+            profili: action.payload
+          };
+        
       default:
         break;
     }

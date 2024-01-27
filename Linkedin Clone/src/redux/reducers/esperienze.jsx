@@ -5,35 +5,40 @@ export default function esperienzeReducer(state = [], action) {
         ...state,
         esperienze: [...action.payload],
       };
-      case 'ADD_ESPERIENZE':
-        console.log("Esperienze aggiunte:", action);
-        return {
-          ...state,
-          esperienze: [...state.esperienze, action.payload],
-        }
+    case 'ADD_ESPERIENZE':
+      console.log("Esperienze aggiunte:", action);
+      return {
+        ...state,
+        esperienze: [...state.esperienze, action.payload],
+      }
 
     case 'PUT_ESPERIENZE':
       // Trova l'indice dell'oggetto da aggiornare nell'array
-      const indexToUpdate = state.esperienze.findIndex(item => item._id === action.payload._id);
+      const indexToUpdate = state.esperienze.findIndex(exp => exp._id === action.payload._id);
 
-      // Se l'oggetto è stato trovato, sostituiscilo con il nuovo payload
-      if (indexToUpdate !== -1) {
-        const updatedEsperienze = [...state.esperienze];
-        updatedEsperienze[indexToUpdate] = action.payload;
+      console.log("Esperienze aggiunte:", indexToUpdate);
+      // Sostituisci l'oggetto esistente con quello aggiornato
+      const updatedEsperienze = [...state.esperienze];
+      updatedEsperienze[indexToUpdate] = action.payload;
 
-        return {
-          ...state,
-          esperienze: updatedEsperienze
-        };
-      } else {
-        // Se l'oggetto non è stato trovato, restituisci lo stato senza modifiche
-        return state;
+      return {
+        ...state,
+        esperienze: updatedEsperienze,
       }
 
+      case 'DEL_ESPERIENZE':
+    const updatedEsperienzeAfterDelete = state.esperienze.filter(exp => exp._id !== action.payload._id);
+    return {
+        ...state,
+        esperienze: updatedEsperienzeAfterDelete,
+    };
+
+    
     default:
       break;
   }
 
   return state;
 }
+
 
