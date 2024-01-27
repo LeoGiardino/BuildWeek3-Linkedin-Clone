@@ -1,4 +1,4 @@
-import { Container, Row, Col, Dropdown, Nav, NavLink } from 'react-bootstrap';
+import { Container, Row, Col, Nav, NavLink } from 'react-bootstrap';
 import { CaretDownFill, GearFill, QuestionCircleFill, ShieldShaded } from 'react-bootstrap-icons';
 import '../styles/Footer.css';
 
@@ -9,29 +9,29 @@ function Footer() {
                 <Row>
                     <Col xs={6} md={2}>
                         <Nav className="flex-column">
-                            <NavLink>Informazioni</NavLink>
-                            <NavLink>Linee guida della community</NavLink>
-                            <NavLink>Privacy e condizioni <CaretDownFill /></NavLink>
-                            <NavLink>Sales Solutions</NavLink>
-                            <NavLink>Centro sicurezza</NavLink>
+                            <NavLink className='titoloFooter'>Informazioni</NavLink>
+                            <NavLink className='titoloFooter'>Linee guida della community</NavLink>
+                            <NavLink className='titoloFooter'>Privacy e condizioni <CaretDownFill /></NavLink>
+                            <NavLink className='titoloFooter'>Sales Solutions</NavLink>
+                            <NavLink className='titoloFooter'>Centro sicurezza</NavLink>
                         </Nav>
                     </Col>
 
                     <Col xs={6} md={2}>
                         <Nav className="flex-column">
-                            <NavLink>Accessibilità</NavLink>
-                            <NavLink>Carriera</NavLink>
-                            <NavLink>Opzioni per gli annunci pubblicitari</NavLink>
-                            <NavLink>Mobile</NavLink>
+                            <NavLink className='titoloFooter'>Accessibilità</NavLink>
+                            <NavLink className='titoloFooter'>Carriera</NavLink>
+                            <NavLink className='titoloFooter'>Opzioni per gli annunci pubblicitari</NavLink>
+                            <NavLink className='titoloFooter'>Mobile</NavLink>
                         </Nav>
                     </Col>
 
                     <Col xs={6} md={2}>
                         <Nav className="flex-column">
-                            <NavLink>Talent Solutions</NavLink>
-                            <NavLink>Soluzioni di marketing</NavLink>
-                            <NavLink>Pubblicità</NavLink>
-                            <NavLink>Piccole imprese</NavLink>
+                            <NavLink className='titoloFooter'>Talent Solutions</NavLink>
+                            <NavLink className='titoloFooter'>Soluzioni di marketing</NavLink>
+                            <NavLink className='titoloFooter'>Pubblicità</NavLink>
+                            <NavLink className='titoloFooter'>Piccole imprese</NavLink>
                         </Nav>
                     </Col>
 
@@ -41,7 +41,7 @@ function Footer() {
                                 <div className='d-flex align-items-start'>
                                     <QuestionCircleFill className='mt-1 me-1' />
                                     <div className='d-flex flex-column'>
-                                        <span>Domande?</span><span>Visita il nostro Centro assistenza</span>
+                                        <span className='titoloFooter'>Domande?</span><span className='sottotitoloFooter'>Visita il nostro Centro assistenza</span>
                                     </div>
                                 </div>
                             </NavLink>
@@ -49,26 +49,25 @@ function Footer() {
                                 <div className='d-flex align-items-start'>
                                     <GearFill className='mt-1 me-1' />
                                     <div className='d-flex flex-column'>
-                                        <span>Gestisci il tuo account e la tua privacy</span><span>Vai alle impostazioni</span>
+                                        <span className='titoloFooter'>Gestisci il tuo account e la tua privacy</span><span className='sottotitoloFooter'>Vai alle impostazioni</span>
                                     </div>
                                 </div>
                             </NavLink>
-                            
-                            <NavLink><ShieldShaded /> Trasparenza sui contenuti consigliati <br /> <span>Scopri di più sui contenuti consigliati.</span>
+                            <NavLink>
+                                <div className='d-flex align-items-start'>
+                                    <ShieldShaded className='mt-1 me-1' />
+                                    <div className='d-flex flex-column'>
+                                        <span className='titoloFooter'>Trasparenza sui contenuti consigliati</span><span className='sottotitoloFooter'>Scopri di più sui contenuti consigliati.</span>
+                                    </div>
+                                </div>
                             </NavLink>
                         </Nav>
                     </Col>
                     <Col xs={12} md={3}>
-                        <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Seleziona lingua
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#">Italiano (Italiano)</Dropdown.Item>
-                                <Dropdown.Item href="#">Inglese</Dropdown.Item>
-                                <Dropdown.Item href="#">Francese</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
+                        <div className="d-flex flex-column align-items-start">
+                            <span className='sottotitoloFooter'>Seleziona lingua</span>
+                            <button className='btnFooter w-100'>Italiano (Italiano) <CaretDownFill /></button>
+                        </div>
                     </Col>
                 </Row>
                 <Row>
