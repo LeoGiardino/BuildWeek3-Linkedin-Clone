@@ -1,5 +1,6 @@
 import '../../styles/CentroProfile.css'
 import '../../styles/ColorPallette.css'
+import AltreOfferteComp from './AltreOfferteComp'
 import ConsigliatiComp from './ConsigliatiComp'
 import OfferteComp from './OfferteComp'
 import PremiumJobsComp from './PremiumJobsComp'
@@ -15,6 +16,7 @@ export default function CentroJobs() {
         <ConsigliatiComp />
         <PremiumJobsComp />
         <SelezioneComp />
+        <AltreOfferteComp />
       </div>
     </>
 

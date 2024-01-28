@@ -4,6 +4,7 @@ import { getProfile } from '../redux/actions/profiles'
 import '../styles/BodyProfile.css'
 import RightProfile from '../components/profiloComponents/RightProfile';
 import CentroProfile from '../components/profiloComponents/CentroProfile';
+import Footer from '../components/Footer';
 
 export default function BodyProfile() {
 
@@ -21,7 +22,7 @@ export default function BodyProfile() {
                 <CentroProfile />
                 <RightProfile />
             </div>
-
+            <Footer />
         </>
     )
 }
