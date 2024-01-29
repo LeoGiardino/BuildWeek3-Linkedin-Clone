@@ -5,12 +5,12 @@ export default function esperienzeReducer(state = [], action) {
         ...state,
         esperienze: [...action.payload],
       };
-    case 'ADD_ESPERIENZE':
-      console.log("Esperienze aggiunte:", action);
-      return {
-        ...state,
-        esperienze: [...state.esperienze, action.payload],
-      }
+      case 'ADD_POST':
+        console.log("Post aggiunti:", action);
+        return {
+          ...state,
+          post: Array.isArray(state.post) ? [...state.post, action.payload] : [action.payload]
+        }
 
     case 'PUT_ESPERIENZE':
       // Trova l'indice dell'oggetto da aggiornare nell'array

@@ -13,7 +13,7 @@ export default function BodyProfile() {
 
     return (
         <>
-            <div className='d-flex w-100 container p-4 principale'>
+            <div className='d-flex container p-4 principale' style={{ maxWidth: '1128px' }}>
                 <LeftJobs />
                 <CentroJobs />
                 <RightJobs />
