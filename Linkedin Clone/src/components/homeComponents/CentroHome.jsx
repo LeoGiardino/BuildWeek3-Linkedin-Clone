@@ -1,5 +1,7 @@
 import '../../styles/CentroProfile.css'
 import '../../styles/ColorPallette.css'
+import AggiuntaPostComp from './AggiuntaPostComp'
+import CorpoPostsComp from './CorpoPostsComp'
 
 
 
@@ -8,8 +10,8 @@ export default function CentroHome() {
     <>
 
       <div className='centro me-3' style={{ width: '100%' }}>
-        
-        Centro Home
+       <AggiuntaPostComp />
+       <CorpoPostsComp />
       </div>
     </>
 
