@@ -58,7 +58,9 @@ export const uploadProfileImage = (imageFile) => {
     return function (dispatch, getState) {
       // Crea un oggetto FormData per gestire l'upload del file
       const formData = new FormData();
-      formData.append('profile', imageFile);
+      formData.append('profile', imageFile);  
+
+      console.log("Form data:", imageFile);
   
       // Configura le opzioni della richiesta
       const options = {
@@ -69,6 +71,7 @@ export const uploadProfileImage = (imageFile) => {
           'Content-Type': 'multipart/form-data',
         },
         data: formData,
+     
       };
   
       // Effettua la richiesta

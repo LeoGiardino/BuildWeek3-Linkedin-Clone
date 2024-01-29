@@ -32,8 +32,15 @@ export default function esperienzeReducer(state = [], action) {
         ...state,
         esperienze: updatedEsperienzeAfterDelete,
     };
+    case 'UPLOAD_ESPERIENZA_IMAGE':
+      const indiceAggiornato = state.esperienze.findIndex(exp => exp._id === action.payload._id);
+      const esperienzeVecchie = [...state.esperienze];
+      esperienzeVecchie[indiceAggiornato] = action.payload;
 
-    
+      return {
+        ...state,
+        esperienze: esperienzeVecchie,
+      }
     default:
       break;
   }
