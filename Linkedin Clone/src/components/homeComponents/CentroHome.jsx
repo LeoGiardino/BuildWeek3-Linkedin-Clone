@@ -10,8 +10,10 @@ export default function CentroHome() {
     <>
 
       <div className='centro me-3' style={{ width: '100%' }}>
-       <AggiuntaPostComp />
-       <CorpoPostsComp />
+        <AggiuntaPostComp />
+    
+          <CorpoPostsComp />
+
       </div>
     </>
 

@@ -5,19 +5,22 @@ import profiliReducer from '../reducers/profili';
 import esperienzeReducer from '../reducers/esperienze';
 import listaProfiliReducer from '../reducers/listaProfiliReducer'
 import reducerAmico from '../reducers/reducerAmico';
+import postReducer from '../reducers/post';
 
 const state = {
   profili: {},
   esperienze: {},
   listaProfili: [],
-  amico : {}
+  amico : {},
+  post : {}
 };
 
 const bigReducer = combineReducers({
   profili: profiliReducer,
   esperienze : esperienzeReducer,
   listaProfili: listaProfiliReducer,
-  amico: reducerAmico
+  amico: reducerAmico,
+  post: postReducer
 });
 
 console.log(state);
