@@ -5,6 +5,9 @@ import profiliReducer from '../reducers/profili';
 import esperienzeReducer from '../reducers/esperienze';
 import listaProfiliReducer from '../reducers/listaProfiliReducer'
 import reducerAmico from '../reducers/reducerAmico';
+import listaLavoriReducer from '../reducers/listaLavoriReducer';
+import SearchJob from '../reducers/SearchJob';
+import preferitiReducer from '../reducers/preferitiReducer';
 import postReducer from '../reducers/post';
 
 const state = {
@@ -12,6 +15,9 @@ const state = {
   esperienze: {},
   listaProfili: [],
   amico : {},
+  listaLavori: [],
+  lavoriTrovati: '',
+  listaPreferiti: []
   post : {}
 };
 
@@ -20,6 +26,9 @@ const bigReducer = combineReducers({
   esperienze : esperienzeReducer,
   listaProfili: listaProfiliReducer,
   amico: reducerAmico,
+  listaLavori: listaLavoriReducer,
+  lavoriTrovati: SearchJob,
+  listaPreferiti: preferitiReducer
   post: postReducer
 });
 

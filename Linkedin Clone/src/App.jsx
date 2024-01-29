@@ -9,6 +9,7 @@ import RandomProfile from './pages/RandomProfile';
 import BodyHome from './pages/HomeBody';
 import BodyJobs from './pages/BodyJobs'
 import Footer from './components/Footer';
+import JobsPreferiti from './pages/JobsPreferiti';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/jobs' element={<BodyJobs />}/>
         <Route path='/me' element={<BodyProfile />}/>
         <Route path='/:id' element={<RandomProfile/>}/>
+        <Route path='/jobs/preferiti' element={<JobsPreferiti />} />
       </Routes>
     </BrowserRouter>
 

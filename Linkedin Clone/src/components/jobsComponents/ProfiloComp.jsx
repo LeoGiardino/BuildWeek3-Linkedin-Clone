@@ -1,8 +1,10 @@
 import { Card } from 'react-bootstrap'
 import '../../styles/JobsStyle/Jobs.css'
 import { BookmarkFill, Clipboard2Check, GearFill, ListTask, PencilSquare, Youtube } from 'react-bootstrap-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function ProfiloComp() {
+    const navigate = useNavigate()
     return (
         <>
             <Card>
@@ -12,7 +14,7 @@ export default function ProfiloComp() {
                             <BookmarkFill className='me-3 iconcine' />
                             <span>Le mie offerte di lavoro</span>
                         </div>
-                        <div className='d-flex align-items-center mb-3'>
+                        <div onClick={() => navigate('/jobs/preferiti')} className='d-flex align-items-center mb-3'>
                             <ListTask className='me-3 iconcine' />
                             <span>Preferenze</span>
                         </div>

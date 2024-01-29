@@ -1,8 +1,20 @@
 import '../../styles/JobsStyle/Jobs.css'
 import { Card } from 'react-bootstrap'
 import { ArrowRight, Dot, Linkedin, XLg } from 'react-bootstrap-icons'
+import LavoroCard from './LavoroCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { Lavori } from '../../redux/actions/Lavori'
 
 export default function ConsigliatiComp() {
+    const dispatch = useDispatch()
+    const lavori = useSelector(state => state.listaLavori)
+
+     //console.log(lavori)
+
+    useEffect(() => {
+        dispatch(Lavori())
+    }, [])
     return (
         <Card className='compBackgroundForm'>
             <Card.Body className='d-flex flex-column pb-0' >
@@ -11,7 +23,7 @@ export default function ConsigliatiComp() {
                     <p className='pageGrayTxt sottotitoloCons'>Sulla base del tuo profilo e della tua cronologia delle ricerche</p>
 
                 </div>
-
+                {lavori.slice(0, 5).map(lav => <LavoroCard key= {lav._id} company = {lav.company_name} location = {lav.candidate_required_location} published = {lav.publication_date} titolo = {lav.title} />)}
 
                 <div className='d-flex justify-content-between flex-column align-items-start mb-4 expRow w-100'>
                     <div className='d-flex justify-content-between align-items-start consigliatiGroup w-100'>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,11 +8,23 @@ import "../styles/Navbar.css";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/esm/Button";
-import { useSelector } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux"; 
 import { Link } from "react-router-dom";
+import { SearchLavori } from "../redux/actions/SearchLavori";
 
 function Navigazione() {
   const state1 = useSelector((state) => state.profili);
+  const [jobName, setJobName] = useState()
+  const dispatch = useDispatch()
+
+  const handlePressEnter = (eve) => {
+    
+    if(eve.key === 'Enter') {
+      eve.preventDefault()
+      dispatch(SearchLavori(jobName))
+      eve.target.value = ''
+    }
+  }
   return (
     <Navbar
       bg="dark"
@@ -34,6 +46,8 @@ function Navigazione() {
         <Form inline>
           <Form.Control
             type="text"
+            onChange = {(ele) => setJobName(ele.target.value)}
+            onKeyDown={handlePressEnter}
             placeholder="⌕ cerca"
             className="custom-placeholder ricercaResponsive"
             style={{
