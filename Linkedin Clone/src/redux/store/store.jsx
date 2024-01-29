@@ -17,7 +17,7 @@ const state = {
   amico : {},
   listaLavori: [],
   lavoriTrovati: '',
-  listaPreferiti: []
+  listaPreferiti: [],
   post : {}
 };
 
@@ -28,7 +28,7 @@ const bigReducer = combineReducers({
   amico: reducerAmico,
   listaLavori: listaLavoriReducer,
   lavoriTrovati: SearchJob,
-  listaPreferiti: preferitiReducer
+  listaPreferiti: preferitiReducer,
   post: postReducer
 });
 
