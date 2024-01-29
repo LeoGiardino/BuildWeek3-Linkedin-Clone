@@ -17,6 +17,7 @@ button.nostroBtnHome {
     padding: 0.6rem 0.6rem 0.6rem 1rem;
     border: 1px solid #949493;
     text-align: start;
+
     &:hover {
         background-color: #44474B;
     }
@@ -32,6 +33,7 @@ button.nostroBtnHome {
     padding: 0.8rem;
     border-radius: 8px;
     margin-bottom: 0.3rem;
+
     &:hover {
         background-color: #44474B;
     }
@@ -42,6 +44,7 @@ button.nostroBtnHome {
     border: none;
     border-radius: 2rem;
     padding: 0.3rem 1rem;
+
     &:hover {
         background-color: #AAD6FF;
     }
@@ -67,9 +70,10 @@ button.nostroBtnHome {
 
 }
 
-.headerModale{
+.headerModale {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+
     &:hover {
         background-color: #44474B;
     }
@@ -78,5 +82,44 @@ button.nostroBtnHome {
 .modal-header .btn-close {
     margin-top: -3rem;
     color: #EDEDE3;
- }                  
-                   
+}
+
+.mioTextInput {
+    background-color: #1B1F23;
+    border: none;
+    color: #EDEDE3;
+    margin-bottom: 4rem;
+
+    &:focus {
+        background-color: #1B1F23;
+        border: none;
+        outline: none;
+        outline-offset: 0;
+        box-shadow: none;
+        color: #EDEDE3;
+    }
+
+    &::placeholder {
+        color: #949493;
+    }
+}
+
+
+.iconeAggiunte .iconcine2 {
+    color: #EDEDE3;
+    background-color: #44474B;
+
+}
+
+.iconeAggiunte div {
+    cursor: pointer;
+    padding: 0.8rem 1.1rem;
+    margin: 0.2rem;
+    border-radius: 50%;
+    background-color: #44474B;
+
+    &:hover {
+        
+        box-shadow: 1px 1px 5px 1px #000000;
+    }
+}

@@ -7,7 +7,7 @@ import articolo from '../../assets/articolo.png'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { CaretDownFill, Clock } from 'react-bootstrap-icons'
+import { Calendar3, CaretDownFill, Clock, EmojiSmile, Image, PatchMinusFill, ThreeDots } from 'react-bootstrap-icons'
 
 export default function AggiuntaPostComp() {
     const [show, setShow] = useState(false);
@@ -57,14 +57,30 @@ export default function AggiuntaPostComp() {
                         </div>
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <div>
-                        <Form.Control as="textarea" className='mioTextArea' placeholder="Di cosa vorresti parlare?"
-                        />
+                <Modal.Body className='pt-0'>
+                    <div className='d-flex flex-column align-items-start justify-content-between'>
+                        <Form.Control type="text" placeholder="Di cosa vorresti parlare?" className='mioTextInput' />
+                        <EmojiSmile className='iconcine ms-3 fs-5' />
+
+                        <div className='iconeAggiunte d-flex align-items-center mt-2'>
+                            <div>
+                                <Image className='iconcine2 bg-dark' />
+                            </div>
+                            <div>
+                                <Calendar3 className='iconcine2' />
+                            </div>
+                            <div>
+                                <PatchMinusFill className='iconcine2' />
+                            </div>
+                            <div>
+                                <ThreeDots className='iconcine2' />
+                            </div>
+
+                        </div>
                     </div>
-                Woohoo, you are reading this text in a modal!</Modal.Body>
+                </Modal.Body>
                 <Modal.Footer>
-                    <Clock className='iconcine me-2' />
+                    <Clock className='iconcine me-2 fs-5' />
                     <button className='pubblicaBtn' variant="primary" onClick={handleClose}>
                         Pubblica
                     </button>
