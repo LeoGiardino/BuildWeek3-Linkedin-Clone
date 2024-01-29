@@ -16,7 +16,7 @@ export default function RisorseComp() {
                 <div>
                     <div className='d-flex justify-content-between flex-column align-items-start'>
 
-                        <div className='d-flex justify-content-between firstRow'>
+                        <div className='d-flex justify-content-start firstRow w-100'>
                             <div className='icons'><Router /></div>
                             <div className='d-flex flex-column'>
                                 <div>

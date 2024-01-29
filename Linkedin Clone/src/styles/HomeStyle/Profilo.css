@@ -1,0 +1,89 @@
+.card {
+    background-color: #1B1F23;
+    border-radius: 10px;
+    color: #EDEDE3;
+    margin-bottom: 0.5rem;
+}
+
+.imgPropicHome {
+    width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #949493;
+}
+
+.descrizioneProfilo {
+    font-size: 90%;
+    color: #949493;
+    text-align: center;
+    border-bottom: 1px solid #949493;
+    padding: 0 0.6rem 1rem 0.6rem;
+}
+
+.collegamentiProfilo {
+    font-size: 90%;
+    color: #949493;
+    border-bottom: 1px solid #949493;
+    padding: 1rem 0.6rem;
+
+    span {
+        cursor: pointer;
+
+        &:hover {}
+    }
+
+    .pageBlueTxt {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+.expandWeb {
+    color: #EDEDE3;
+}
+
+.premiumProfilo {
+    font-size: 90%;
+    color: #949493;
+    border-bottom: 1px solid #949493;
+    padding: 1rem 0.6rem;
+
+}
+
+.prefeProfilo {
+    font-size: 90%;
+    color: #949493;
+    padding: 1rem 0.6rem;
+    cursor: pointer;
+}
+
+.linksProfilo {
+    padding: 1rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 90%;
+
+    p {
+        color: #6ABAFB;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .iconcine {
+        cursor: pointer;
+    }
+}
+
+.risorseFooter {
+    cursor: pointer;
+    font-size: 90%;
+}

@@ -39,7 +39,7 @@ function Navigazione() {
         zIndex: 15,
       }}
     >
-      <Container className="px-4">
+      <Container className="px-4" style={{ maxWidth: '1128px' }}>
         <Link  to={"/"}>
           <i className="bi bi-linkedin"></i>
         </Link>
