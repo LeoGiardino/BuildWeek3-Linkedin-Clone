@@ -1,6 +1,10 @@
 import '../../styles/CentroProfile.css'
 import '../../styles/ColorPallette.css'
-import PrimoBox from '../profiloComponents/PrimoBox'
+import AltreOfferteComp from './AltreOfferteComp'
+import ConsigliatiComp from './ConsigliatiComp'
+import OfferteComp from './OfferteComp'
+import PremiumJobsComp from './PremiumJobsComp'
+import SelezioneComp from './SelezioneComp'
 
 
 export default function CentroJobs() {
@@ -8,8 +12,11 @@ export default function CentroJobs() {
     <>
 
       <div className='centro me-3' style={{ width: '100%' }}>
-        Centro Jobs
-        
+        <OfferteComp />
+        <ConsigliatiComp />
+        <PremiumJobsComp />
+        <SelezioneComp />
+        <AltreOfferteComp />
       </div>
     </>
 

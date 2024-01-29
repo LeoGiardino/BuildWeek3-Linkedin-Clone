@@ -22,7 +22,6 @@ function App() {
         <Route path='/me' element={<BodyProfile />}/>
         <Route path='/:id' element={<RandomProfile/>}/>
       </Routes>
-      <Footer />
     </BrowserRouter>
 
     </>
