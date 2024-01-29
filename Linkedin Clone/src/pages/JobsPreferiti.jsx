@@ -2,9 +2,12 @@ import React from 'react'
 import { Card, Container } from 'react-bootstrap'
 import { ArrowRight } from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux'
+import LavoroCard from '../components/jobsComponents/LavoroCard'
+import "../styles/JobsStyle/Jobs.css"
+import "../styles/CentroProfile.css"
 
 export default function JobsPreferiti() {
-    const preferiti = useSelector(state => state.preferiti)
+    const preferiti = useSelector(state => state.listaPreferiti)
     console.log(preferiti)
   return (
     <>
@@ -16,7 +19,7 @@ export default function JobsPreferiti() {
 
                     </div>
 
-                    {/* {risultati.slice(0, 5).map(lav => <LavoroCard key= {lav._id} company = {lav.company_name} location = {lav.candidate_required_location} published = {lav.publication_date} titolo = {lav.title} />)} */}
+                     {preferiti.map(lav => <LavoroCard key= {lav._id} company = {lav.company} location = {lav.location} published = {lav.published} titolo = {lav.titolo} />)} 
                     
 
                 </Card.Body>

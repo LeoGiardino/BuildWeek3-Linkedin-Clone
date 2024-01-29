@@ -10,7 +10,7 @@ export default function ConsigliatiComp() {
     const dispatch = useDispatch()
     const lavori = useSelector(state => state.listaLavori)
 
-    // console.log(lavori)
+     //console.log(lavori)
 
     useEffect(() => {
         dispatch(Lavori())

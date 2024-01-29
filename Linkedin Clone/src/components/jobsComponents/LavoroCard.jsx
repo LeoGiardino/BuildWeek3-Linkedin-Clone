@@ -8,10 +8,10 @@ export default function LavoroCard({company, location, titolo, published}) {
   const dispatch = useDispatch()
 
   const [oggPref, setOggPref] = useState({})
-  const elemSalvati = useSelector(state => state.listaPreferiti)
-  console.log(elemSalvati)
-  console.log(oggPref)
-
+  // console.log(oggPref)
+  useEffect(()=>{
+    setOggPref({titolo, company, location, published})
+  },[])
   return (
     <>
         <div className='d-flex justify-content-between flex-column align-items-start mb-4 expRow'>
@@ -22,7 +22,7 @@ export default function LavoroCard({company, location, titolo, published}) {
                             <span className='nomeFormazione'>{company}</span>
                             <span className='periodoFormazione'>{location}</span>
                             <p className='periodoFormazione secondoSottotitolo'>{published}<span className='float-end'><i onClick={() => {
-                              setOggPref({titolo, company, location, published});
+                              
                               dispatch(SalvaPreferito(oggPref))
                             }} className="bi bi-heart fs-5"></i></span></p>
                         </div>
