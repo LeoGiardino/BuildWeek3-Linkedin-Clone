@@ -111,3 +111,38 @@ export const deletePost = (delPost) => {
 };
 
 
+
+export const postImgPost = (imageFile, id) => {
+    return function (dispatch, getState) {
+
+        // Crea un oggetto FormData per gestire l'upload del file
+        const formData = new FormData();
+        formData.append('post', imageFile);
+
+        console.log("Form data:", imageFile);
+        console.log("ID:", id);
+
+        const options = {
+            method: 'POST',
+            url: `https://striveschool-api.herokuapp.com/api/posts/${id}`,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            data: formData
+        };
+        // Effettua la richiesta
+        axios.request(options)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: 'UPLOAD_POST_IMAGE',
+                    payload: response.data,
+                });
+            })
+            .catch(error => {
+                console.error("Error during image upload:", error);
+                // Gestisci l'errore in modo appropriato, ad esempio inviando un'azione di errore
+                // dispatch({ type: 'UPLOAD_PROFILE_IMAGE_ERROR', payload: error.message });
+            });
+    };
+};

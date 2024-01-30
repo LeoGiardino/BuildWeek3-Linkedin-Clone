@@ -13,10 +13,12 @@ import { Link } from "react-router-dom";
 import { SearchLavori } from "../redux/actions/SearchLavori";
 
 function Navigazione() {
+
   const state1 = useSelector((state) => state.profili);
   const [jobName, setJobName] = useState()
   const dispatch = useDispatch()
 
+  console.log(state1);
   const handlePressEnter = (eve) => {
     
     if(eve.key === 'Enter') {

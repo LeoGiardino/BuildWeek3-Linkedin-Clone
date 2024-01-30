@@ -1,7 +1,7 @@
 import { Card, Form } from 'react-bootstrap'
 import '../../styles/AttivitaComp.css'
 import { ArrowRight, Dot, XLg } from 'react-bootstrap-icons'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { Calendar3, CaretDownFill, Clock, EmojiSmile, Image, PatchMinusFill, ThreeDots } from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux';
@@ -9,7 +9,8 @@ import { useDispatch } from 'react-redux';
 import { addPosts } from '../../redux/actions/post';
 import { getPosts } from '../../redux/actions/post';
 import { getListaProfili } from '../../redux/actions/getListaProfili';
-import { deletePost } from '../../redux/actions/post';
+import { deletePost, postImgPost } from '../../redux/actions/post';
+import { getMyPosts } from '../../redux/actions/myPost';
 
 
 
@@ -17,35 +18,68 @@ export default function AttivitaComp() {
 
     const posts = useSelector((state) => state?.post?.post);
     const profilo = useSelector((state) => state?.profili?.profili);
+    const stato = useSelector((state) => state?.mieiPost?.post);
+    const [img, setImg] = useState('');
+    const fileInputRef = useRef(null);
+
 
     const dispatch = useDispatch();
 
-    
-    
-    
+
+    console.log(profilo);
+
     const [post, setPost] = useState({
         text: '',
+
     })
-    
+
+    console.log(stato);
+
+    useEffect(() => {
+        dispatch(getMyPosts(profilo?._id));
+    }, [])
+
     const handleInputChange = (e) => {
-        console.log("Input changed:", e.target.name, e.target.value);
+        console.log("Input changed:", post);
         setPost({
             ...post,
             [e.target.name]: e.target.value
+
         })
     }
-    
+
     const [show, setShow] = useState(false);
 
-    
+
     useEffect(() => {
         dispatch(getPosts());
-      }, [show]);
+    }, [show]);
     // const postFiltrati = posts.filter(post => post?.user?._id === profilo?.id);
 
 
+    const addImg = (e, id) => {
+        const file = e.target.files[0];
+        console.log("File:", file);
+        console.log("ID:", id);
+
+        // Verifica che fileInputRef.current sia definito
+        if (fileInputRef.current) {
+            fileInputRef.current.click();
+        }
+
+        // Verifica che 'file' sia definito prima di chiamare dispatch
+        if (file) {
+            dispatch(postImgPost(file, id))
+        }
+    };
+
+
+
+
+
+
     return (
-        
+
         <>
             <Card className='compBackgroundExp'>
                 <Card.Body className='d-flex flex-column pb-0' >
@@ -63,34 +97,44 @@ export default function AttivitaComp() {
                     </div>
 
                     {posts && profilo && posts.filter(post => post?.user?._id === profilo?._id).map((post) => (
-                        
-                    <div className='d-flex justify-content-between flex-column align-items-start expRow'>
-                        <div className='d-flex'>
 
-                        <span className='azioneAttivita'>{post?.user?.name} {post?.user?.surname} ha diffuso questo post <Dot /> 1 giorno</span>
-                        <div className='d-flex justify-content-end align-items-start pennaEsperienza'>
-                            <img onClick={() => putHandle()} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" />
-                            <XLg className='ms-2' onClick={() => {dispatch(deletePost(post._id)); dispatch(getPosts())}} />    
-                        </div>
-                        
-                        </div>
-                        <div className='d-flex mt-1'>
-                            <div className='imgAttivita'><img className='rounded-1' src='https://picsum.photos/60'></img></div>
-                            <div className='d-flex flex-column justify-content-between'>
-                                <span className='titoloPost'>{post?.text}</span>
-                                <span className='titoloPost'>...</span>
+                        <div className='d-flex justify-content-between flex-column align-items-start expRow'>
+                            <div className='d-flex'>
+
+                                <span className='azioneAttivita'>{post?.user?.name} {post?.user?.surname} ha diffuso questo post <Dot /> 1 giorno</span>
+                                <div className='d-flex justify-content-end align-items-start pennaEsperienza'>
+                                    <img onClick={() => putHandle()} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" />
+                                    <XLg className='ms-2' onClick={() => { dispatch(deletePost(post._id)); dispatch(getPosts()) }} />
+                                </div>
+
+                            </div>
+                            <div className='d-flex mt-1'>
+                                <div className='imgAttivita' onClick={() => fileInputRef.current.click()}
+                                    alt="">
+                                    <input
+                                        ref={fileInputRef}
+                                        type='file'
+                                        style={{ display: 'none' }}
+                                        onChange={(e) => addImg(e, post?._id)}
+                                        accept='image/*'
+                                    />
+                                    <img style={{ width: '75px', height: '75px' }} className='rounded-1' src={post?.image}></img>
+                                </div>
+                                <div className='d-flex flex-column justify-content-between'>
+                                    <span className='titoloPost'>{post?.text}</span>
+                                    <span className='titoloPost'>...</span>
+                                </div>
+                            </div>
+                            <div className='reactions d-flex justify-content-between align-items-center w-100 m-0'>
+                                <p className=' d-flex justify-content-between align-items-center'>
+                                    <img src='https://static.licdn.com/aero-v1/sc/h/emei2gdl9ikg7penkh9ij9llx' />
+                                    <img src='https://static.licdn.com/aero-v1/sc/h/9wt27hvi2lgll1v30u00n0p5p' />
+                                    <img src='https://static.licdn.com/aero-v1/sc/h/3bhtnif60blspoiyhoex4lfx' />
+                                    <span className='reactionsNum'>614</span>
+                                </p>
+                                <p>20 commenti</p>
                             </div>
                         </div>
-                        <div className='reactions d-flex justify-content-between align-items-center w-100 m-0'>
-                            <p className=' d-flex justify-content-between align-items-center'>
-                                <img src='https://static.licdn.com/aero-v1/sc/h/emei2gdl9ikg7penkh9ij9llx' />
-                                <img src='https://static.licdn.com/aero-v1/sc/h/9wt27hvi2lgll1v30u00n0p5p' />
-                                <img src='https://static.licdn.com/aero-v1/sc/h/3bhtnif60blspoiyhoex4lfx' />
-                                <span className='reactionsNum'>614</span>
-                            </p>
-                            <p>20 commenti</p>
-                        </div>
-                    </div>
                     ))}
 
                     {/* <div className='d-flex justify-content-between flex-column align-items-start expRow'>
@@ -152,11 +196,13 @@ export default function AttivitaComp() {
                 <Modal.Body className='pt-0'>
                     <div className='d-flex flex-column align-items-start justify-content-between'>
                         <Form.Control type="text" placeholder="Di cosa vorresti parlare?" name='text' className='mioTextInput' onChange={handleInputChange} />
+                        <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493' }} src={img} alt="" />
                         <EmojiSmile className='iconcine ms-3 fs-5' />
-
                         <div className='iconeAggiunte d-flex align-items-center mt-2'>
-                            <div>
+                            <div className='addImgPost'>
                                 <Image className='iconcine2 bg-dark' />
+
+
                             </div>
                             <div>
                                 <Calendar3 className='iconcine2' />
@@ -173,7 +219,7 @@ export default function AttivitaComp() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Clock className='iconcine me-2 fs-5' />
-                    <button className='pubblicaBtn' variant="primary" onClick={() => {dispatch(addPosts(post)); setShow(false)}}>
+                    <button className='pubblicaBtn' variant="primary" onClick={() => { dispatch(addPosts(post)); setShow(false) }}>
                         Pubblica
                     </button>
                 </Modal.Footer>

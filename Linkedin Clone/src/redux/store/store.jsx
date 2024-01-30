@@ -9,6 +9,7 @@ import listaLavoriReducer from '../reducers/listaLavoriReducer';
 import SearchJob from '../reducers/SearchJob';
 import preferitiReducer from '../reducers/preferitiReducer';
 import postReducer from '../reducers/post';
+import myPostReducer from '../reducers/myPost'
 
 const state = {
   profili: {},
@@ -18,7 +19,8 @@ const state = {
   listaLavori: [],
   lavoriTrovati: '',
   listaPreferiti: [],
-  post : {}
+  post : {},
+  mieiPost : []
 };
 
 const bigReducer = combineReducers({
@@ -29,7 +31,8 @@ const bigReducer = combineReducers({
   listaLavori: listaLavoriReducer,
   lavoriTrovati: SearchJob,
   listaPreferiti: preferitiReducer,
-  post: postReducer
+  post: postReducer,
+  mieiPost: myPostReducer
 });
 
 console.log(state);
