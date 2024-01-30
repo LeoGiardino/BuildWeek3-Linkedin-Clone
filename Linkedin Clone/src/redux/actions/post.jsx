@@ -59,11 +59,11 @@ export const getPosts  = () => {
   };
 
 
-export const putEsperienze = (addExp) => {
+export const putPost = (addExp) => {
     return function (dispatch, getState) {
         const options = {
             method: 'PUT',
-            url: `https://striveschool-api.herokuapp.com/api/profile/${mio}/experiences/${addExp._id}`,
+            url: `https://striveschool-api.herokuapp.com/api/posts/${addExp}`,
             headers: {
                 'Authorization': 'Bearer ' + token
             },
@@ -73,7 +73,7 @@ export const putEsperienze = (addExp) => {
         axios.request(options)
             .then(response => {
                 dispatch({
-                    type: 'PUT_ESPERIENZE',
+                    type: 'PUT_POST',
                     payload: addExp
                 });
             })

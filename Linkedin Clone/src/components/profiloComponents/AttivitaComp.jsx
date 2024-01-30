@@ -233,7 +233,7 @@ aria-labelledby="example-modal-sizes-title-lg"
                 </Modal.Header>
                 <Modal.Body className='pt-0'>
                     <div className='d-flex flex-column align-items-start justify-content-between'>
-                        <Form.Control type="text" placeholder="Di cosa vorresti parlare?" name='text' className='mioTextInput' onChange={handleInputChange} />
+                        <Form.Control type="text" placeholder="Di cosa vorresti parlare?" name='text' value={post.text} className='mioTextInput' onChange={handleInputChange} />
                        
                         <EmojiSmile className='iconcine ms-3 fs-5' />
                         <div className='iconeAggiunte d-flex align-items-center mt-2'>

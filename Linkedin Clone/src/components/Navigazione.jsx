@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,11 +11,17 @@ import Button from "react-bootstrap/esm/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SearchLavori } from "../redux/actions/SearchLavori";
+import { getProfile } from "../redux/actions/profiles";
 
 function Navigazione() {
-  const state1 = useSelector((state) => state.profili);
+  const state1 = useSelector((state) => state?.profili);
   const [jobName, setJobName] = useState();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProfile());
+    console.log("Profile:", state1);
+  }, []);
 
   console.log(state1);
   const handlePressEnter = (eve) => {
