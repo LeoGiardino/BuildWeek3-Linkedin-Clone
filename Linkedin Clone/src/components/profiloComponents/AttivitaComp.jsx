@@ -43,7 +43,7 @@ export default function AttivitaComp() {
 
     useEffect(() => {
         dispatch(getMyPosts(profilo?._id));
-    }, [])
+    }, [posts])
 
     const handleInputChange = (e) => {
         console.log("Input changed:", post);
