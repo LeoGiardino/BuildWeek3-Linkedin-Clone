@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../../styles/PrimoBox.css';
+import '../../styles/ProfiloConsultati.css';
 import '../../styles/ColorPallette.css';
 import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -32,7 +32,7 @@ export default function ProfiloConsultati() {
                     alt=''
                     style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                 />
-                <div className='immagineP'><img className='imgAmico rounded-circle' src={state.image} /></div>
+                <div className='immagineP'><img className='imgAmico rounded-circle' src={state.image}  /></div>
                 
                 
             </div>

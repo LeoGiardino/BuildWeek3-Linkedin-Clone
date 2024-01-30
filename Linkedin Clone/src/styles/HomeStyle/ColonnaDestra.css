@@ -24,3 +24,9 @@ li::marker{
     color: #949493;
     font-size: 13px;
 }
+
+.ftrjbs {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 80px !important;
+  }

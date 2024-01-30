@@ -32,7 +32,7 @@ export default function CorpoPostsComp() {
                   <>
                 <p className='mb-0'>{profilo?.name + ' ' + profilo?.surname}</p>
                 <span style={{ fontSize: '12px' }} className='pageGrayTxt'>{profilo?.title}</span>
-                <span style={{ fontSize: '12px' }} className='pageGrayTxt'>{post.createdAt}</span>
+                <span style={{ fontSize: '12px' }} className='pageGrayTxt'>{new Date(post.createdAt).toLocaleDateString()}</span>
                 </>
                 )}
 
@@ -48,19 +48,19 @@ export default function CorpoPostsComp() {
               <img style={{ width: '100%' }} src={post.image} alt="" />
             </div>
             <div style={{ borderTop: '1px solid gray' }} className="d-flex justify-content-between p-3 mt-2">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center postHover">
                 <i className="bi bi-hand-thumbs-up iconPost"></i>
                 <span className="fw-bold ms-2">Consiglia</span>
               </div>
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center postHover">
                 <i className="bi bi-chat-text iconPost"></i>
                 <span className="fw-bold ms-2">Commenta</span>
               </div>
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center postHover">
                 <i className="bi bi-arrow-repeat iconPost"></i>
                 <span className="fw-bold ms-2">Diffondi il post</span>
               </div>
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center postHover">
                 <i className="bi bi-send-fill iconPost"></i>
                 <span className="fw-bold ms-2">Invia</span>
               </div>

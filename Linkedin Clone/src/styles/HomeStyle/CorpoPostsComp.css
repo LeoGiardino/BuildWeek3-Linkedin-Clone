@@ -1,3 +1,14 @@
 .iconPost {
     font-size: 16px;
 }
+
+.postHover{
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background-color: #44474B;
+    }
+}
