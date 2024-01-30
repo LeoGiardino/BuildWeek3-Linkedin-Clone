@@ -76,7 +76,7 @@ export default function PrimoBox() {
 
 
     const [lgShow, setLgShow] = useState(false);
-
+    
     return (
         <>
             <div className='primoBox compBackground'>
@@ -88,10 +88,10 @@ export default function PrimoBox() {
                         style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                     />
                     <div className='immagineP'>
-
+                
                     <img
-                        style={{ width: '100%', borderRadius: '50%' }}
-                        src={state.profili?.image}
+                        style={{ width: '100%', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center' }}
+                        src={state.profili?.image || "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"}
                         alt=''
                         onClick={() => document.getElementById('imageInput').click()}
                     />
