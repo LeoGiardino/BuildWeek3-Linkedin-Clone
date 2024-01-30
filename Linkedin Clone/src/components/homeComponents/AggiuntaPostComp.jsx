@@ -26,17 +26,17 @@ export default function AggiuntaPostComp() {
                     </div>
 
                     <div className='d-flex align-items-center justify-content-between mt-2 tipiPost'>
-                        <div>
+                        <div className='ps-0' style={{ fontSize: '12px' }}>
                             <img className='postLogo mb-1' src={multimedia} />
                             <span className='fw-bold'>Contenuti multimediali</span>
                         </div>
 
-                        <div>
+                        <div className='ps-0' style={{ fontSize: '12px' }}>
                             <img className='postLogo' src={evento} />
                             <span className='fw-bold'>Evento</span>
                         </div>
 
-                        <div>
+                        <div className='ps-0' style={{ fontSize: '12px' }}>
                             <img className='postLogo' src={articolo} />
                             <span className='fw-bold'>Scrivi un articolo</span>
                         </div>
@@ -63,7 +63,7 @@ export default function AggiuntaPostComp() {
                         <EmojiSmile className='iconcine ms-3 fs-5' />
 
                         <div className='iconeAggiunte d-flex align-items-center mt-2'>
-                            <div>
+                            <div className=''>
                                 <Image className='iconcine2 bg-dark' />
                             </div>
                             <div>
