@@ -32,7 +32,7 @@ export default function ProfiloConsultati() {
                     alt=''
                     style={{ width: '100%', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}
                 />
-                <div className='immagineP'><img className='imgAmico rounded-circle' src={state.image}  /></div>
+                <div className='immagineP2'><img className='imgAmico rounded-circle' src={state.image}  /></div>
                 
                 
             </div>

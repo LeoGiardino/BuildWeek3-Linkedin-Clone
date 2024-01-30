@@ -47,22 +47,24 @@ export default function ProfiloComp() {
                 </Card.Body>
             </Card>
 
-            <Card>
-                <Card.Body className='px-0 py-0'>
-                    <div className='linksProfilo '>
-                        <div>
-                            <p>Gruppi</p>
-                            <p>Eventi</p>
-                            <p className='mb-0'>Hastag seguiti</p>
-                        </div>
+      <Card>
+        <Card.Body className="px-0 py-0">
+          <div className="linksProfilo ">
+            <div>
+              <p>Gruppi</p>
+              <p>Eventi</p>
+              <p className="mb-0">Hastag seguiti</p>
+            </div>
 
-                        <div>
-                            <PlusLg className='iconcine' />
-                        </div>
-                    </div>
-                </Card.Body>
-                <Card.Footer className='text-center risorseFooter'>Scopri di più</Card.Footer>
-            </Card>
-        </>
-    )
+            <div>
+              <PlusLg className="iconcine" />
+            </div>
+          </div>
+        </Card.Body>
+        <Card.Footer className="text-center risorseFooter">
+          Scopri di più
+        </Card.Footer>
+      </Card>
+    </>
+  );
 }

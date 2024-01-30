@@ -1,32 +1,45 @@
+.immagineP2{
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    left: 18px;
+    top: 90px;
+    border: 2px solid #1B1F23;
+    z-index: 5;
+}
+
+
 @media screen and (min-width: 1400px) {
-    .immagineP{
-        top: 135px;
+    .immagineP2{
+        top: 85px;
     }
 }
 
 
 @media screen and (max-width: 1199px) {
-    .immagineP{
-        top: 40px;
+    .immagineP2{
+        top: 80px;
     }
 }
 
-@media screen and (max-width: 991px) {
-    .immagineP{
-        top: 55px;
+@media screen and (max-width: 989px) {
+    .immagineP2{
+        top: 110px;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .immagineP{
-        top: 16px;
+@media screen and (max-width: 804px) {
+    .immagineP2{
+        top: 60px;
     }
 }
 
-@media screen and (max-width: 616px) {
-    .immagineP{
+@media screen and (max-width: 632px) {
+    .immagineP2{
         width: 120px;
         height: 120px;
+        top: 25px;
     }
 
     .primoBox{
@@ -36,5 +49,19 @@
     .imgBanner{
         border-top-right-radius: 0!important;
         border-top-left-radius: 0!important;
+    }
+}
+
+@media screen and (max-width: 499px) {
+
+
+    .bottoniP .btn3 {
+        font-size: 0; /* Imposta la dimensione del testo a 0 */
+        padding: 2px 10px;
+    }
+
+    .bottoniP .btn3::before {
+        content: "..."; /* Aggiunge i puntini come contenuto prima */
+        font-size: 16px; /* Imposta la dimensione del testo desiderata per i puntini */
     }
 }

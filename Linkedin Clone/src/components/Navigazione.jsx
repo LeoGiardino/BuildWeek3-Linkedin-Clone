@@ -208,7 +208,6 @@ function Navigazione() {
                     boxShadow: "none",
                   }}
                 >
-                  {" "}
                   Tu
                 </Dropdown.Toggle>
 
@@ -227,18 +226,20 @@ function Navigazione() {
                   >
                     <div className="d-flex align-items-center">
                       <Link to="/me">
-                        <img
-                          src={state1?.profili?.image}
-                          alt="profileImage"
-                          style={{
-                            width: "50px",
-                            height: "50px",
-                            borderRadius: "50%",
-                            marginTop: "9px",
-                            marginLeft: "9px",
-                            marginBottom: "5px",
-                          }}
-                        />
+                        {state1 && state1.profili && (
+                          <img
+                            src={state1?.profili?.image}
+                            alt="profileImage"
+                            style={{
+                              width: "50px",
+                              height: "50px",
+                              borderRadius: "50%",
+                              marginTop: "9px",
+                              marginLeft: "9px",
+                              marginBottom: "5px",
+                            }}
+                          />
+                        )}
                       </Link>
                       <div className="d-flex flex-column ms-2">
                         <span style={{ color: "#EDEDE3" }}>
