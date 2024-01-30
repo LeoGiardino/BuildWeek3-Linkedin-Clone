@@ -83,11 +83,11 @@ export default function EsperienzaComp() {
 
     const handleAddImgExp = (e, id) => {
         const file = e.target.files[0];
-        console.log( "id :" + id);
-   
+        console.log("id :" + id);
+
         console.log("File:", file);
-        
-        if(file){
+
+        if (file) {
             dispatch(postImgEsperienze(file, id))
         }
     }
@@ -122,16 +122,16 @@ export default function EsperienzaComp() {
                                         <span className='periodo' name='startDate'>{new Date(esperienza.startDate).toLocaleDateString()}</span>
                                         <span className='periodo' name='area'>{esperienza.area} </span>
                                         <span className='descrizione' name='description'>{esperienza.description}</span>
-                                        {esperienza && esperienza.image &&(
-                                    
-                                    <div className='my-3' style={{ width: '105px' , height: '55px', borderRadius: '20px'}}>
-                                        <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493'}} src={esperienza?.image} alt="" />
-                                    </div>
-                                    
-                                    )}
+                                        {esperienza && esperienza.image && (
+
+                                            <div className='my-3' style={{ width: '105px', height: '55px', borderRadius: '20px' }}>
+                                                <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493' }} src={esperienza?.image} alt="" />
+                                            </div>
+
+                                        )}
                                     </div>
                                 </div>
-                                    
+
                             </div>
                         ))
                     }
@@ -218,23 +218,29 @@ export default function EsperienzaComp() {
                                 <Form.Control className='input' type="text" value={form2.startDate} name='startDate' onChange={handlePutChange} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Media</Form.Label>
-                                <p>Aggiungi contenuti multimediali come immagini, documenti, siti o presentazioni. Scopri di più sui <span style={{ color: '#6abafb' }}> tipi di file multimediali supportati</span></p>
-                                <Button className='btn2 fw-bold' onClick={() => document.getElementById('addImg').click()}>+ Aggiungi media</Button>
-                                <div>
-                                    <div className='my-3' style={{ width: '105px', height: '55px' }}>
-                                        <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493'}} src={form2.image} alt="" />
-                                        <input
-                                            type='file'
-                                            id='addImg'
-                                            style={{ display: 'none' }}
-                                            onChange={(e) => handleAddImgExp(e, form2._id)}
-                                            accept='image/*'
-                                        />
-
-                                    </div>
-                                </div>
-                            </Form.Group>
+    <Form.Label>Media</Form.Label>
+    <p>Aggiungi contenuti multimediali come immagini, documenti, siti o presentazioni. Scopri di più sui <span style={{ color: '#6abafb' }}> tipi di file multimediali supportati</span></p>
+    <Button className='btn2 fw-bold' onClick={() => document.getElementById('addImg').click()}>+ Aggiungi media</Button>
+    <div>
+        <div className='my-3' style={{ width: '105px', height: '55px' }}>
+            <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493'}} src={form2.image} alt="" />
+            <input
+                type='file'
+                id='addImg'
+                style={{ display: 'none' }}
+                onChange={(e) => {
+                    handleAddImgExp(e, form2._id);
+                    // Aggiorna lo stato form2.image quando l'utente seleziona un nuovo file
+                    setForm2({
+                        ...form2,
+                        image: URL.createObjectURL(e.target.files[0])
+                    });
+                }}
+                accept='image/*'
+            />
+        </div>
+    </div>
+</Form.Group>
 
                         </Form>
 

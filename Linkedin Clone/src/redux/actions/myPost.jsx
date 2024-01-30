@@ -14,7 +14,6 @@ export const getMyPosts  = (id) => {
             headers :{
                 'Authorization': 'Bearer ' + token
             } 
-
         }
         axios.request(options)
         .then(response => {
