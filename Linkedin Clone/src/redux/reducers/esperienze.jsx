@@ -1,4 +1,5 @@
 export default function esperienzeReducer(state = [], action) {
+  console.log(action);
   switch (action.type) {
     case 'GET_ESPERIENZE':
       return {

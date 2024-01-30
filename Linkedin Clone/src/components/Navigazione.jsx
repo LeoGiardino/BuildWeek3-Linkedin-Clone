@@ -8,29 +8,30 @@ import "../styles/Navbar.css";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/esm/Button";
-import { useDispatch, useSelector } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { SearchLavori } from "../redux/actions/SearchLavori";
 
 function Navigazione() {
-  const state1 = useSelector((state) => state.profili);
-  const [jobName, setJobName] = useState()
-  const dispatch = useDispatch()
 
+  const state1 = useSelector((state) => state.profili);
+  const [jobName, setJobName] = useState();
+  const dispatch = useDispatch();
+
+  console.log(state1);
   const handlePressEnter = (eve) => {
-    
-    if(eve.key === 'Enter') {
-      eve.preventDefault()
-      dispatch(SearchLavori(jobName))
-      eve.target.value = ''
+    if (eve.key === "Enter") {
+      eve.preventDefault();
+      dispatch(SearchLavori(jobName));
+      eve.target.value = "";
     }
-  }
+  };
   return (
     <Navbar
       bg="dark"
       data-bs-theme="dark"
       expand="xl"
-      className="bg-body-bglink"
+      className="bg-body-bglink naviga"
       style={{
         "--bs-navbar-padding-y": "0",
         "--bs-navbar-brand-padding-y": "0",
@@ -39,14 +40,14 @@ function Navigazione() {
         zIndex: 15,
       }}
     >
-      <Container className="px-4" style={{ maxWidth: '1128px' }}>
-        <Link  to={"/"}>
-          <i className="bi bi-linkedin"></i>
+      <Container className="px-4" style={{ maxWidth: "1128px" }}>
+        <Link to={"/"}>
+          <i className="bi bi-linkedin me-2"></i>
         </Link>
         <Form inline>
           <Form.Control
             type="text"
-            onChange = {(ele) => setJobName(ele.target.value)}
+            onChange={(ele) => setJobName(ele.target.value)}
             onKeyDown={handlePressEnter}
             placeholder="⌕ cerca"
             className="custom-placeholder ricercaResponsive"
@@ -54,12 +55,13 @@ function Navigazione() {
               backgroundColor: "#2D363F",
               color: "#EDEDE3",
               border: 0,
-              width: "300px",
+              width: "50dvh",
+              height: "39px",
               marginRight: "95px",
             }}
           />
         </Form>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="togglino" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">
@@ -176,14 +178,19 @@ function Navigazione() {
               style={{ borderRight: "1px solid #373A3D", paddingRight: "15px" }}
             >
               <div className="bottoneNav d-flex flex-column LinkAlign">
-                <i
-                  class="bi bi-bell-fill"
+                <img
+                  src={state1?.profili?.image}
+                  alt="profileImage"
+                  className="dropNo LinkAlign img-responsive"
                   style={{
-                    color: "#949493",
-                    fontSize: "23px",
-                    marginTop: "8px",
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                    marginTop: "9px",
+                    marginLeft: "9px",
+                    marginBottom: "5px",
                   }}
-                ></i>
+                />
                 <Dropdown.Toggle
                   variant="none"
                   id="dropdown-basic"
@@ -214,9 +221,24 @@ function Navigazione() {
                     style={{ borderBottom: "1px solid #373A3D" }}
                   >
                     <div className="d-flex">
-                      <div className="immaginePNav"></div>
+                      <img
+                        src={state1?.profili?.image}
+                        alt="profileImage"
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          borderRadius: "50%",
+                          marginTop: "9px",
+                          marginLeft: "9px",
+                          marginBottom: "5px",
+                        }}
+                      />
                       <div className="d-flex flex-column ms-2">
-                        <span style={{ color: "#EDEDE3" }}>{state1?.profili?.name + " " + state1?.profili?.surname}</span>
+                        <span style={{ color: "#EDEDE3" }}>
+                          {state1?.profili?.name +
+                            " " +
+                            state1?.profili?.surname}
+                        </span>
                         <span
                           style={{
                             fontSize: "14px",
@@ -229,20 +251,28 @@ function Navigazione() {
                       </div>
                     </div>
                     <div className="d-flex flex-column mt-2">
-                      <Button className="btn2 fw-bold" as={Link} to='/me'>Visualizza profilo</Button>
+                      <Button className="btn2 fw-bold" as={Link} to="/me">
+                        Visualizza profilo
+                      </Button>
                     </div>
                   </Dropdown.Item>
                   <Dropdown.ItemText style={{ color: "#EDEDE3" }}>
                     Account
                   </Dropdown.ItemText>
                   <Dropdown.Item href="#/action-2">
-                    <i
-                      class="bi bi-slash-square-fill"
-                      style={{ color: "orange" }}
-                    ></i>{" "}
-                    <span className="premiumHover">
-                      Prova Premium per 0 EUR
-                    </span>
+                    <div className="d-flex align-items-center">
+                      <div
+                        class="premiumIcon me-1"
+                        style={{
+                          width: "15px",
+                          height: "15px",
+                          borderRadius: "10%",
+                        }}
+                      ></div>
+                      <span className="premiumHover fw-bold">
+                        Prova Premium per 0 EUR
+                      </span>
+                    </div>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
                     Impostazione e privacy
@@ -270,7 +300,7 @@ function Navigazione() {
                 </Dropdown.Menu>
               </div>
             </Dropdown>
-            <Dropdown style={{ paddingRight: "10px" }}>
+            <Dropdown>
               <div className="bottoneNav d-flex flex-column LinkAlign">
                 <i
                   class="bi bi-grid-3x3-gap-fill"

@@ -25,14 +25,14 @@ export default function CorpoPostsComp() {
           <div key={post._id} className="compBackground pageWhtTxt mb-2" style={{ width: '100%', borderRadius: '10px' }}>
             <div className="d-flex p-3">
               <div className="me-3">
-                <img className="rounded-circle" src="https://media.licdn.com/dms/image/C4D0BAQGZyFrbDqG6mA/company-logo_100_100/0/1630472646377/bitsoftwaresolution_logo?e=1714608000&v=beta&t=VvajNjrpFPhkEEF1hFCHk8Vzt5bVyYQkAeDq_WlGAcQ" alt="" />
+                <img style={{ width: '50px', height: '50px' }} className="rounded-circle" src="https://media.licdn.com/dms/image/C4D0BAQGZyFrbDqG6mA/company-logo_100_100/0/1630472646377/bitsoftwaresolution_logo?e=1714608000&v=beta&t=VvajNjrpFPhkEEF1hFCHk8Vzt5bVyYQkAeDq_WlGAcQ" alt="" />
               </div>
               <div className="d-flex flex-column">
                 {profili?.map((profilo) => profilo._id === post.user._id  && 
                   <>
-                <p>{profilo?.name + ' ' + profilo?.surname}</p>
-                <span>{profilo?.title}</span>
-                <span>{post.createdAt}</span>
+                <p className='mb-0'>{profilo?.name + ' ' + profilo?.surname}</p>
+                <span style={{ fontSize: '12px' }} className='pageGrayTxt'>{profilo?.title}</span>
+                <span style={{ fontSize: '12px' }} className='pageGrayTxt'>{post.createdAt}</span>
                 </>
                 )}
 
