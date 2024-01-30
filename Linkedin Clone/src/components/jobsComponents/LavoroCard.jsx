@@ -7,6 +7,15 @@ export default function LavoroCard({company, location, titolo, published}) {
 
   const dispatch = useDispatch()
 
+  function handlePrefe (ele) {
+    if(ele.target.className === "bi bi-heart fs-5"){
+      dispatch(SalvaPreferito(oggPref)),
+      ele.target.className = "bi bi-heart-fill fs-5"
+    }else{
+      ele.target.className = "bi bi-heart fs-5"
+    }
+  }
+
   const [oggPref, setOggPref] = useState({})
   // console.log(oggPref)
   useEffect(()=>{
@@ -21,10 +30,8 @@ export default function LavoroCard({company, location, titolo, published}) {
                             <div className='d-flex justify-content-between align-items-center'><span className='ente consigliatiPosizione'>{titolo}</span><XLg className='iconcineCons' /></div>
                             <span className='nomeFormazione'>{company}</span>
                             <span className='periodoFormazione'>{location}</span>
-                            <p className='periodoFormazione secondoSottotitolo'>{published}<span className='float-end'><i onClick={() => {
-                              
-                              dispatch(SalvaPreferito(oggPref))
-                            }} className="bi bi-heart fs-5"></i></span></p>
+                            <p className='periodoFormazione secondoSottotitolo'>{published}<span className='float-end'><i onClick={(ele) => 
+                              handlePrefe(ele)} className="bi bi-heart fs-5"></i></span></p>   
                         </div>
                     </div>
         </div>
