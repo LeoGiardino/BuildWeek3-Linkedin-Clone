@@ -21,7 +21,7 @@ export default function CentroProfileRandom() {
 
   useEffect(()=>{
     dispatch(EsperienzeAmico(id))
-  })
+  }, [id])
 
   const exper = useSelector(state=>state.expAmico)
   console.log(exper)
