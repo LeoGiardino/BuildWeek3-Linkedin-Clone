@@ -14,19 +14,25 @@ import { getMyPosts } from '../../redux/actions/myPost';
 
 
 
+import Button from 'react-bootstrap/Button';
+
+
+
+
 export default function AttivitaComp() {
 
     const posts = useSelector((state) => state?.post?.post);
     const profilo = useSelector((state) => state?.profili?.profili);
-    const stato = useSelector((state) => state?.mieiPost?.post);
+    const stato = useSelector((state) => state?.mieiPost?.post);   
     const [img, setImg] = useState('');
     const fileInputRef = useRef(null);
 
+    const [postModal, setPostModal] = useState(false);
 
     const dispatch = useDispatch();
 
 
-    console.log(profilo);
+    console.log(posts);
 
     const [post, setPost] = useState({
         text: '',
@@ -81,6 +87,7 @@ export default function AttivitaComp() {
     return (
 
         <>
+        
             <Card className='compBackgroundExp'>
                 <Card.Body className='d-flex flex-column pb-0' >
                     <div className='d-flex justify-content-between mb-1'>
@@ -97,14 +104,14 @@ export default function AttivitaComp() {
                     </div>
 
                     {posts && profilo && posts.filter(post => post?.user?._id === profilo?._id).map((post) => (
-
+                        <>
                         <div className='d-flex justify-content-between flex-column align-items-start expRow'>
                             <div className='d-flex'>
 
                                 <span className='azioneAttivita'>{post?.user?.name} {post?.user?.surname} ha diffuso questo post <Dot /> 1 giorno</span>
                                 <div className='d-flex justify-content-end align-items-start pennaEsperienza'>
-                                    <img onClick={() => putHandle()} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" />
-                                    <XLg className='ms-2' onClick={() => { dispatch(deletePost(post._id)); dispatch(getPosts()) }} />
+                                    <img onClick={() => setPostModal(true)} className="infoPenExp justify-self-end" src="/src/assets/free_icon.svg" alt="" />
+                                    {/* <XLg className='ms-2' onClick={() => { dispatch(deletePost(post._id)); dispatch(getPosts()) }} /> */}
                                 </div>
 
                             </div>
@@ -135,6 +142,37 @@ export default function AttivitaComp() {
                                 <p>20 commenti</p>
                             </div>
                         </div>
+
+<Modal
+size="lg"
+show={postModal}
+onHide={() => setPostModal(false)}
+aria-labelledby="example-modal-sizes-title-lg"
+>
+<Modal.Header closeButton>
+    <Modal.Title id="example-modal-sizes-title-lg">
+        Modifica presentazione
+    </Modal.Title>
+</Modal.Header>
+<Modal.Body>
+    <span>* Indica che è obbligatorio</span>
+    <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Testo*</Form.Label>
+            <Form.Control className='input' type="text" name='text' />
+        </Form.Group>
+        
+        
+     
+
+    </Form>
+
+    <Button className='btn-link text-decoration-none text-white' onClick={() => { setPostModal(false); dispatch(deletePost(post?._id)) }}>Elimina post</ Button>
+
+    <Button className='float-end' onClick={() => { setPostModal(false) }}>Salva</Button>
+</Modal.Body>
+</Modal>
+</>
                     ))}
 
                     {/* <div className='d-flex justify-content-between flex-column align-items-start expRow'>
@@ -182,7 +220,7 @@ export default function AttivitaComp() {
             </Card>
 
             <Modal show={show} >
-                <Modal.Header closeButton>
+                <Modal.Header closeButton onClick={() => setShow(false)}>
                     <Modal.Title>
                         <div className='d-flex align-items-center headerModale'>
                             <img className='rounded-circle me-2 propicHomeC' src='https://picsum.photos/40' />
@@ -196,7 +234,7 @@ export default function AttivitaComp() {
                 <Modal.Body className='pt-0'>
                     <div className='d-flex flex-column align-items-start justify-content-between'>
                         <Form.Control type="text" placeholder="Di cosa vorresti parlare?" name='text' className='mioTextInput' onChange={handleInputChange} />
-                        <img style={{ width: '100%', height: '100%', borderRadius: '8px', border: '1px solid #949493' }} src={img} alt="" />
+                       
                         <EmojiSmile className='iconcine ms-3 fs-5' />
                         <div className='iconeAggiunte d-flex align-items-center mt-2'>
                             <div className='addImgPost'>
@@ -219,12 +257,15 @@ export default function AttivitaComp() {
                 </Modal.Body>
                 <Modal.Footer>
                     <Clock className='iconcine me-2 fs-5' />
+                    
                     <button className='pubblicaBtn' variant="primary" onClick={() => { dispatch(addPosts(post)); setShow(false) }}>
                         Pubblica
                     </button>
                 </Modal.Footer>
             </Modal>
 
+
+           
         </>
     )
 }

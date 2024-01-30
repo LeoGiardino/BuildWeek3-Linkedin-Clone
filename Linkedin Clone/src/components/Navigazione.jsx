@@ -55,7 +55,7 @@ function Navigazione() {
               backgroundColor: "#2D363F",
               color: "#EDEDE3",
               border: 0,
-              width: "50dvh",
+              width: "23dvh",
               height: "39px",
               marginRight: "95px",
             }}

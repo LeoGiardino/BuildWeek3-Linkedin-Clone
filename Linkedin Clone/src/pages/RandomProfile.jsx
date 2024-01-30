@@ -6,7 +6,7 @@ import CentroProfileRandom from '../components/profiloComponents/CentroProfileRa
 
 export default function RandomProfile() {
   return (
-    <div className='d-flex w-100 container p-4 principale'>
+    <div className='d-flex container p-4 principale' style={{ maxWidth: '1128px' }}>
 
                 <CentroProfileRandom />
                 <RightProfile />
