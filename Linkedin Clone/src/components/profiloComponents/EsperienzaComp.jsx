@@ -119,7 +119,7 @@ export default function EsperienzaComp() {
                                     <div className='d-flex flex-column'>
                                         <span className='professione' name='role'>{esperienza.role}</span>
                                         <span className='azienda' name='company'>{esperienza.company}</span>
-                                        <span className='periodo' name='startDate'>{esperienza.startDate}</span>
+                                        <span className='periodo' name='startDate'>{new Date(esperienza.startDate).toLocaleDateString()}</span>
                                         <span className='periodo' name='area'>{esperienza.area} </span>
                                         <span className='descrizione' name='description'>{esperienza.description}</span>
                                         {esperienza && esperienza.image &&(

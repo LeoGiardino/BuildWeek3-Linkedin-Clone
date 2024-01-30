@@ -30,7 +30,7 @@ export default function LavoroCard({company, location, titolo, published}) {
                             <div className='d-flex justify-content-between align-items-center'><span className='ente consigliatiPosizione'>{titolo}</span><XLg className='iconcineCons' /></div>
                             <span className='nomeFormazione'>{company}</span>
                             <span className='periodoFormazione'>{location}</span>
-                            <p className='periodoFormazione secondoSottotitolo'>{published}<span className='float-end'><i onClick={(ele) => 
+                            <p className='periodoFormazione secondoSottotitolo'>{new Date(published).toLocaleDateString()}<span className='float-end'><i onClick={(ele) => 
                               handlePrefe(ele)} className="bi bi-heart fs-5"></i></span></p>   
                         </div>
                     </div>
