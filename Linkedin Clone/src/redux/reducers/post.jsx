@@ -20,6 +20,15 @@ export default function postReducer(state = [], action) {
           ...state,
           post: newPosts
       }
+      case 'UPLOAD_POST_IMAGE':
+      const indiceAggiornato = state.post.findIndex(exp => exp._id === action.payload._id);
+      const postVecchi = [...state.post];
+      postVecchi[indiceAggiornato] = action.payload;
+
+      return {
+        ...state,
+        post: postVecchi,
+      }
           
         default:
           break;
