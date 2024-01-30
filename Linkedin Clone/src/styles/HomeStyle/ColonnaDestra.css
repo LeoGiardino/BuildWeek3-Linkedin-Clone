@@ -1,0 +1,32 @@
+
+
+.cardNotizie{
+    background-color: #1B1F23;
+    border-radius: 10px;
+    color: #EDEDE3;
+   
+}
+
+.listaNotizie{
+    font-size: 15px;
+    text-decoration: #1B1F23;
+}
+
+li::marker{
+    color: #949493;
+}
+
+.notizie p{
+    margin-bottom: 8px;
+}
+
+.notizie p{
+    color: #949493;
+    font-size: 13px;
+}
+
+.ftrjbs {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 80px !important;
+  }

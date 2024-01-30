@@ -1,5 +1,5 @@
 export default function profiliReducer(state = [], action) {
-  console.log(action);
+  // console.log(action);
     switch (action.type) {
       case 'GET_PROFILE':
         return {

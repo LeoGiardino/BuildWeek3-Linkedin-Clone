@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {token} from '../../data'
+import { token } from '../../data'
 
 const id = "6551ed02c55e7e0018f83c08";
 const mio = "65b22a72913f650018d0954e";
@@ -9,23 +9,23 @@ export const getEsperienze = () => {
         const options = {
             method: 'GET',
             url: `https://striveschool-api.herokuapp.com/api/profile/${mio}/experiences`,
-            headers :{
+            headers: {
                 'Authorization': 'Bearer ' + token
-            } 
+            }
         }
         axios.request(options)
-        .then(response => {
-            console.log(response.data);
-            dispatch({
-                type: 'GET_ESPERIENZE',
-                payload: response.data
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: 'GET_ESPERIENZE',
+                    payload: response.data
+                })
             })
-        })
 
     };
-  };
+};
 
-  export const postEsperienze = (addExp) => {
+export const postEsperienze = (addExp) => {
     return function (dispatch, getState) {
         const options = {
             method: 'POST',
@@ -99,6 +99,42 @@ export const delEsperienze = (delExp) => {
                 console.error("Error during DELETE request:", error);
                 console.error("Response data:", error.response ? error.response.data : 'No response data available');
                 // Puoi anche dispatch un'azione di errore qui se necessario
+            });
+    };
+};
+
+
+export const postImgEsperienze = (imageFile, id) => {
+    return function (dispatch, getState) {
+
+        // Crea un oggetto FormData per gestire l'upload del file
+        const formData = new FormData();
+        formData.append('experience', imageFile);
+
+        console.log("Form data:", imageFile);
+        console.log("ID:", id);
+
+        const options = {
+            method: 'POST',
+            url: `https://striveschool-api.herokuapp.com/api/profile/${mio}/experiences/${id}/picture`,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            data: formData
+        };
+        // Effettua la richiesta
+        axios.request(options)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: 'UPLOAD_ESPERIENZA_IMAGE',
+                    payload: response.data,
+                });
+            })
+            .catch(error => {
+                console.error("Error during image upload:", error);
+                // Gestisci l'errore in modo appropriato, ad esempio inviando un'azione di errore
+                // dispatch({ type: 'UPLOAD_PROFILE_IMAGE_ERROR', payload: error.message });
             });
     };
 };

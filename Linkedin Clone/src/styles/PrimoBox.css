@@ -13,6 +13,7 @@
 
 .banner{
     position: relative;
+
 }
 
 .penCont{
@@ -49,7 +50,6 @@
     position: absolute;
     width: 152px;
     height: 152px;
-    background-color: #6ABAFB;
     border-radius: 50%;
     left: 18px;
     top: 90px;
@@ -101,25 +101,26 @@
     }
 }
 
-@media screen and (min-width: 1400px) {
-    .immagineP{
-        top: 133px;
-    }
-}
 
 @media screen and (max-width: 1199px) {
     .immagineP{
-        top: 41px;
+        top: 90px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .immagineP{
+        top: 100px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .immagineP{
-        top: 16px;
+        top: 46px;
     }
 }
 
-@media screen and (max-width: 557px) {
+@media screen and (max-width: 616px) {
     .immagineP{
         width: 120px;
         height: 120px;
