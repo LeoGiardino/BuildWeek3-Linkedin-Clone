@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { SearchLavori } from "../redux/actions/SearchLavori";
 
 function Navigazione() {
-
   const state1 = useSelector((state) => state.profili);
   const [jobName, setJobName] = useState();
   const dispatch = useDispatch();
@@ -86,7 +85,7 @@ function Navigazione() {
                 </div>
               </Container>
             </Nav.Link>
-            <Nav.Link href="#rete">
+            <Nav.Link href="#">
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
@@ -130,7 +129,7 @@ function Navigazione() {
                 </div>
               </Container>
             </Nav.Link>
-            <Nav.Link href="#messaggistica">
+            <Nav.Link href="#">
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
@@ -152,7 +151,7 @@ function Navigazione() {
                 </div>
               </Container>
             </Nav.Link>
-            <Nav.Link href="#notifiche">
+            <Nav.Link href="#">
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
@@ -220,19 +219,21 @@ function Navigazione() {
                     className="profileNav"
                     style={{ borderBottom: "1px solid #373A3D" }}
                   >
-                    <div className="d-flex">
-                      <img
-                        src={state1?.profili?.image}
-                        alt="profileImage"
-                        style={{
-                          width: "30px",
-                          height: "30px",
-                          borderRadius: "50%",
-                          marginTop: "9px",
-                          marginLeft: "9px",
-                          marginBottom: "5px",
-                        }}
-                      />
+                    <div className="d-flex align-items-center">
+                      <Link to="/me">
+                        <img
+                          src={state1?.profili?.image}
+                          alt="profileImage"
+                          style={{
+                            width: "50px",
+                            height: "50px",
+                            borderRadius: "50%",
+                            marginTop: "9px",
+                            marginLeft: "9px",
+                            marginBottom: "5px",
+                          }}
+                        />
+                      </Link>
                       <div className="d-flex flex-column ms-2">
                         <span style={{ color: "#EDEDE3" }}>
                           {state1?.profili?.name +

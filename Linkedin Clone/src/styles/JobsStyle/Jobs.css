@@ -149,3 +149,9 @@ h5 {
    cursor: text;
    color: #EDEDE3;
 }
+
+.profilocomp {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 80px !important;
+}
