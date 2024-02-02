@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/esm/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SearchLavori } from "../redux/actions/SearchLavori";
 import { getProfile } from "../redux/actions/profiles";
 
@@ -17,6 +17,8 @@ function Navigazione() {
   const state1 = useSelector((state) => state?.profili);
   const [jobName, setJobName] = useState();
   const dispatch = useDispatch();
+  const location = useLocation();
+  const currentPage = location.pathname;
 
   useEffect(() => {
     dispatch(getProfile());
@@ -73,13 +75,16 @@ function Navigazione() {
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
-                    class="bi bi-house-door-fill"
+                    class={`bi bi-house-door-fill ${
+                      currentPage === "/" ? "activePage" : ""
+                    }`}
                     style={{
                       color: "#949493",
                       fontSize: "23px",
                     }}
                   ></i>
                   <span
+                    class={`${currentPage === "/" ? "activePage" : ""}`}
                     style={{
                       color: "#949493",
                       fontSize: "13px",
@@ -117,13 +122,16 @@ function Navigazione() {
               <Container className="LinkAlign">
                 <div className="bottoneNav d-flex flex-column">
                   <i
-                    class="bi bi-briefcase-fill"
+                    class={`bi bi-briefcase-fill ${
+                      currentPage === "/jobs" ? "activePage" : ""
+                    }`}
                     style={{
                       color: "#949493",
                       fontSize: "23px",
                     }}
                   ></i>
                   <span
+                    class={`${currentPage === "/jobs" ? "activePage" : ""}`}
                     style={{
                       color: "#949493",
                       fontSize: "13px",
@@ -199,7 +207,9 @@ function Navigazione() {
                 <Dropdown.Toggle
                   variant="none"
                   id="dropdown-basic"
-                  className="dropNo LinkAlign"
+                  className={`dropNo LinkAlign ${
+                    currentPage === "/me" ? "activePage" : ""
+                  }`}
                   style={{
                     color: "#949493",
                     fontSize: "13px",

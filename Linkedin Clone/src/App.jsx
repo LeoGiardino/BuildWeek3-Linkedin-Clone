@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BodyProfile from "./pages/BodyProfile";
@@ -10,8 +10,22 @@ import BodyHome from "./pages/HomeBody";
 import BodyJobs from "./pages/BodyJobs";
 import Footer from "./components/Footer";
 import JobsPreferiti from "./pages/JobsPreferiti";
+import LoadingIcon from "./components/LoadingIcon";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingIcon />;
+  }
   return (
     <>
       <BrowserRouter>

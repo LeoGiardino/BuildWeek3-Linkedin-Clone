@@ -155,3 +155,11 @@ h5 {
         position: sticky !important;
         top: 80px !important;
 }
+
+.cardRicerca {
+    background-color:#3e464f;
+}
+
+.cardRicercaFooter:hover {
+    background-color: #2d3239;
+}

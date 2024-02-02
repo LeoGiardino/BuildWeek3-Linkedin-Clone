@@ -120,3 +120,7 @@
 .bottoneNav:hover i, .bottoneNav:hover span, .dropNo:hover{
     color: #E8E6E3 !important;
   }
+
+.activePage {
+        color: #ffffff  !important; 
+}
